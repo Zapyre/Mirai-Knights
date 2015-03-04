@@ -2,8 +2,17 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Units\Unit.cs">
     <Files>
-      <File FileName="Assets\Scripts\Units\Unit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Types\Type.cs" Line="7" Column="27" />
+      <File FileName="Assets\Scripts\Types\Soldier.cs" Line="6" Column="3" />
+      <File FileName="Assets\Scripts\Types\Novice.cs" Line="7" Column="17" />
+      <File FileName="Assets\Scripts\Types\Apprentice.cs" Line="7" Column="21" />
+      <File FileName="Assets\Scripts\Types\Tinker.cs" Line="7" Column="17" />
+      <File FileName="Assets\Scripts\Units\Unit.cs" Line="87" Column="28" />
+      <File FileName="Assets\Scripts\Types\Type.cs" Line="28" Column="22" />
+      <File FileName="Assets\Scripts\Units\Human.cs" Line="5" Column="64" />
+      <File FileName="Assets\Scripts\Units\Elf.cs" Line="5" Column="62" />
+      <File FileName="Assets\Scripts\Units\Protonoid.cs" Line="5" Column="68" />
+      <File FileName="Assets\Scripts\Units\Golem.cs" Line="5" Column="64" />
+      <File FileName="Assets\Scripts\Attacks\BasicMeleeAttack.cs" Line="11" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

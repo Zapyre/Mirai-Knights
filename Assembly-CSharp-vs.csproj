@@ -46,7 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Attacks\BasicMeleeAttack.cs" />
+     <Compile Include="Assets\Scripts\Types\Apprentice.cs" />
+     <Compile Include="Assets\Scripts\Types\Novice.cs" />
+     <Compile Include="Assets\Scripts\Types\Soldier.cs" />
+     <Compile Include="Assets\Scripts\Types\Tinker.cs" />
      <Compile Include="Assets\Scripts\Types\Type.cs" />
+     <Compile Include="Assets\Scripts\Units\Elf.cs" />
+     <Compile Include="Assets\Scripts\Units\Golem.cs" />
+     <Compile Include="Assets\Scripts\Units\Human.cs" />
+     <Compile Include="Assets\Scripts\Units\Protonoid.cs" />
      <Compile Include="Assets\Scripts\Units\Unit.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
