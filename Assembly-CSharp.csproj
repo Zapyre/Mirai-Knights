@@ -46,7 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Attacks\BasicMeleeAttack.cs" />
+     <Compile Include="Assets\Scripts\Attacks\Attack.cs" />
+     <Compile Include="Assets\Scripts\Attacks\BasicPhysicalAttack.cs" />
+     <Compile Include="Assets\Scripts\Attacks\ManaBlast.cs" />
+     <Compile Include="Assets\Scripts\Items\Armors\Armor.cs" />
+     <Compile Include="Assets\Scripts\Items\Armors\BentGreaves.cs" />
+     <Compile Include="Assets\Scripts\Items\Armors\OldHelmet.cs" />
+     <Compile Include="Assets\Scripts\Items\Armors\RustyLeggings.cs" />
+     <Compile Include="Assets\Scripts\Items\Armors\TornGauntlets.cs" />
+     <Compile Include="Assets\Scripts\Items\Armors\WornChestguard.cs" />
+     <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapons\WoodenBow.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapons\WoodenCane.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
      <Compile Include="Assets\Scripts\Types\Apprentice.cs" />
      <Compile Include="Assets\Scripts\Types\Novice.cs" />
      <Compile Include="Assets\Scripts\Types\Soldier.cs" />
@@ -57,6 +71,7 @@
      <Compile Include="Assets\Scripts\Units\Human.cs" />
      <Compile Include="Assets\Scripts\Units\Protonoid.cs" />
      <Compile Include="Assets\Scripts\Units\Unit.cs" />
+     <Compile Include="Assets\Scripts\Utilities\UnitUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

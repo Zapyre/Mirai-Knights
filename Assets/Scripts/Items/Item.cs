@@ -1,43 +1,33 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
-using System;
-
-public abstract class Type {
-	// General
+public abstract class Item {
+	public enum ItemType { Weapon, Armor, Consumable };
 	protected string name;
 
-	// Str Related Attributes
 	protected int physicalAttack;
 	protected int physicalRange;
-	protected int [] block = new int [Enum.GetNames(typeof(Attack.Direction)).Length];
 	protected int frontBlock;
 	protected int sideBlock;
 	protected int backBlock;
 
-	// Dex Related Attributes
 	protected int speed;
 	protected int frontDodge;
 	protected int sideDodge;
 	protected int backDodge;
 	protected int phyisicalAim;
 
-	// Int Related Attributes
 	protected int magicAttack;
 	protected int magicAim;
 	protected int magicRange;
 
-	// End Related Attributes
 	protected int health;
 	protected int shield;
 
-	// Mixed Attributes
-	protected int actionPoints; // All
-	protected int jump; // Str, Dex
-	protected int physicalArmor; // Str, End
-	protected int magicArmor; // Int, End
-
-	//----------------------------------------------------------//
-
+	protected int actionPoints;
+	protected int jump;
+	protected int physicalArmor;
+	protected int magicArmor;
+	
 	// Getters
 	public string GetName () { return name; }
 
@@ -52,7 +42,7 @@ public abstract class Type {
 	public int GetSideDodge () { return sideDodge; }
 	public int GetBackDodge () { return backDodge; }
 	public int GetPhyisicalAim () { return phyisicalAim; }
-	
+
 	public int GetMagicAttack () { return magicAttack; }
 	public int GetMagicAim () { return magicAim; }
 	public int GetMagicRange () { return magicRange; }
