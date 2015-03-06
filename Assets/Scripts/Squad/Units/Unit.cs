@@ -4,7 +4,8 @@ using System.Collections;
 public abstract class Unit {
 	protected string name;
 	protected Texture unitPortrait;
-	protected Type unitType;
+	protected UnitType unitType;
+	protected ArrayList achievementList;
 	protected ArrayList weaponList;
 	protected ArrayList armorList;
 
@@ -20,10 +21,14 @@ public abstract class Unit {
 	protected Vector3 curPos;
 
 	// Getters and Setters
+	public string GetName() { return name; }
+	public void SetName(string n) { name = n; }
 	public Texture GetUnitPortrait () { return unitPortrait; }
 	public void SetUnitPortrait (Texture up) { unitPortrait = up; }
-	public Type GetUnitType () { return unitType; }
-	public void SetUnitType (Type ut) { unitType = ut; }
+	public UnitType GetUnitType () { return unitType; }
+	public void SetUnitType (UnitType ut) { unitType = ut; }
+	public ArrayList GetAchievementList () { return achievementList; }
+	public void SetAchievementList (ArrayList al) { achievementList = al; }
 
 	public int GetStrength () { return strength; }
 	public void SetStrength (int s) { strength = s; }
@@ -54,6 +59,9 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			totalPhysicalDamage += armor.GetPhysicalAttack ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			totalPhysicalDamage += achievement.GetPhysicalAttack ();
+		}
 		return totalPhysicalDamage;
 	}
 
@@ -75,39 +83,51 @@ public abstract class Unit {
 			foreach (Armor armor in armorList) {
 				maxRange += armor.GetPhysicalRange ();
 			}
+			foreach (Achievement achievement in achievementList) {
+				maxRange += achievement.GetPhysicalRange ();
+			}
 		}
 		return maxRange;
 	}
 
 	public int GetFrontBlock () {
-		int totalFrontBlock = unitType.GetFrontBlock ();
+		int totalFrontBlock = unitType.GetBlock((int)Attack.Direction.Front);
 		foreach (Weapon weapon in weaponList) {
-			totalFrontBlock += weapon.GetFrontBlock ();
+			totalFrontBlock += weapon.GetBlock((int)Attack.Direction.Front);
 		}
 		foreach (Armor armor in armorList) {
-			totalFrontBlock += armor.GetFrontBlock ();
+			totalFrontBlock += armor.GetBlock((int)Attack.Direction.Front);
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalFrontBlock += achievement.GetBlock((int)Attack.Direction.Front);
 		}
 		return totalFrontBlock;
 	}
 
 	public int GetSideBlock () {
-		int totalSideBlock = unitType.GetSideBlock ();
+		int totalSideBlock = unitType.GetBlock ((int)Attack.Direction.Side);
 		foreach (Weapon weapon in weaponList) {
-			totalSideBlock += weapon.GetSideBlock ();
+			totalSideBlock += weapon.GetBlock ((int)Attack.Direction.Side);
 		}
 		foreach (Armor armor in armorList) {
-			totalSideBlock += armor.GetSideBlock ();
+			totalSideBlock += armor.GetBlock ((int)Attack.Direction.Side);
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalSideBlock += achievement.GetBlock ((int)Attack.Direction.Side);
 		}
 		return totalSideBlock;
 	}
 
 	public int GetBackBlock () {
-		int totalBackBlock = unitType.GetBackBlock ();
+		int totalBackBlock = unitType.GetBlock ((int)Attack.Direction.Back);
 		foreach (Weapon weapon in weaponList) {
-			totalBackBlock += weapon.GetBackBlock ();
+			totalBackBlock += weapon.GetBlock ((int)Attack.Direction.Back);
 		}
 		foreach (Armor armor in armorList) {
-			totalBackBlock += armor.GetBackBlock ();
+			totalBackBlock += armor.GetBlock ((int)Attack.Direction.Back);
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalBackBlock += achievement.GetBlock ((int)Attack.Direction.Back);
 		}
 		return totalBackBlock;
 	}
@@ -120,38 +140,50 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			totalSpeed += armor.GetSpeed ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			totalSpeed += achievement.GetSpeed ();
+		}
 		return totalSpeed;
 	}
 
 	public int GetFrontDodge () {
-		int totalFrontDodge = unitType.GetFrontDodge ();
+		int totalFrontDodge = unitType.GetDodge ((int)Attack.Direction.Front);
 		foreach (Weapon weapon in weaponList) {
-			totalFrontDodge += weapon.GetFrontDodge ();
+			totalFrontDodge += weapon.GetDodge ((int)Attack.Direction.Front);
 		}
 		foreach (Armor armor in armorList) {
-			totalFrontDodge += armor.GetFrontDodge ();
+			totalFrontDodge += armor.GetDodge ((int)Attack.Direction.Front);
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalFrontDodge += achievement.GetDodge ((int)Attack.Direction.Front);
 		}
 		return totalFrontDodge;
 	}
 
 	public int GetSideDodge () {
-		int totalSideDodge = unitType.GetSideDodge ();
+		int totalSideDodge = unitType.GetDodge ((int)Attack.Direction.Side);
 		foreach (Weapon weapon in weaponList) {
-			totalSideDodge += weapon.GetSideDodge ();
+			totalSideDodge += weapon.GetDodge ((int)Attack.Direction.Side);
 		}
 		foreach (Armor armor in armorList) {
-			totalSideDodge += armor.GetSideDodge ();
+			totalSideDodge += armor.GetDodge ((int)Attack.Direction.Side);
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalSideDodge += achievement.GetDodge ((int)Attack.Direction.Side);
 		}
 		return totalSideDodge;
 	}
 
 	public int GetBackDodge () {
-		int totalBackDodge = unitType.GetBackDodge ();
+		int totalBackDodge = unitType.GetDodge ((int)Attack.Direction.Back);
 		foreach (Weapon weapon in weaponList) {
-			totalBackDodge += weapon.GetBackDodge ();
+			totalBackDodge += weapon.GetDodge ((int)Attack.Direction.Back);
 		}
 		foreach (Armor armor in armorList) {
-			totalBackDodge += armor.GetBackDodge ();
+			totalBackDodge += armor.GetDodge ((int)Attack.Direction.Back);
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalBackDodge += achievement.GetDodge ((int)Attack.Direction.Back);
 		}
 		return totalBackDodge;
 	}
@@ -164,6 +196,9 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			totalPhysicalAim += armor.GetPhyisicalAim ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			totalPhysicalAim += achievement.GetPhyisicalAim ();
+		}
 		return totalPhysicalAim;
 	}
 
@@ -175,6 +210,9 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			totalMagicDamage += armor.GetMagicAttack ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			totalMagicDamage += achievement.GetMagicAttack ();
+		}
 		return totalMagicDamage;
 	}
 
@@ -185,6 +223,9 @@ public abstract class Unit {
 		}
 		foreach (Armor armor in armorList) {
 			totalMagicAim += armor.GetMagicAim ();
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalMagicAim += achievement.GetMagicAim ();
 		}
 		return totalMagicAim;
 	}
@@ -200,6 +241,9 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			maxRange += armor.GetMagicRange ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			maxRange += achievement.GetMagicRange ();
+		}
 		return maxRange;
 	}
 
@@ -210,6 +254,9 @@ public abstract class Unit {
 		}
 		foreach (Armor armor in armorList) {
 			totalHealth += armor.GetHealth ();
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalHealth += achievement.GetHealth ();
 		}
 		return totalHealth;
 	}
@@ -222,6 +269,9 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			totalShield += armor.GetShield ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			totalShield += achievement.GetShield ();
+		}
 		return totalShield;
 	}
 
@@ -232,6 +282,9 @@ public abstract class Unit {
 		}
 		foreach (Armor armor in armorList) {
 			totalActionPoints += armor.GetActionPoints ();
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalActionPoints += achievement.GetActionPoints ();
 		}
 		return totalActionPoints;
 	}
@@ -244,6 +297,9 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			totalJump += armor.GetJump ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			totalJump += achievement.GetJump ();
+		}
 		return totalJump;
 	}
 
@@ -255,6 +311,9 @@ public abstract class Unit {
 		foreach (Armor armor in armorList) {
 			totalPhysicalArmor += armor.GetPhysicalArmor ();
 		}
+		foreach (Achievement achievement in achievementList) {
+			totalPhysicalArmor += achievement.GetPhysicalArmor ();
+		}
 		return totalPhysicalArmor;
 	}
 
@@ -265,6 +324,9 @@ public abstract class Unit {
 		}
 		foreach (Armor armor in armorList) {
 			totalMagicArmor += armor.GetMagicArmor ();
+		}
+		foreach (Achievement achievement in achievementList) {
+			totalMagicArmor += achievement.GetMagicArmor ();
 		}
 		return totalMagicArmor;
 	}

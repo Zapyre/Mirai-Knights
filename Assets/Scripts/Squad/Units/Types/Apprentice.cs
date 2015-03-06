@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Apprentice : Type{
+public class Apprentice : UnitType{
 	public Apprentice (Unit u){
 		// General
 		name = "Apprentice";
@@ -9,15 +9,15 @@ public class Apprentice : Type{
 		// Str Related Attributes
 		physicalAttack = 5 + u.GetStrength ();
 		physicalRange = 0 + (int)(u.GetStrength () / 5);
-		frontBlock = 10 + u.GetStrength (); // Only occurs with shield equiped
-		sideBlock = 10 + u.GetStrength ();
-		backBlock = u.GetStrength ();
+		block[(int)Attack.Direction.Front] = 10 + u.GetStrength (); // Only occurs with shield equiped
+		block[(int)Attack.Direction.Side] = 10 + u.GetStrength ();
+		block[(int)Attack.Direction.Back] = u.GetStrength ();
 		
 		// Dex Related Attributes
 		speed = 2 + (int)(u.GetDexterity () / 5);
-		frontDodge = 25 + u.GetDexterity ();
-		sideDodge = 10 + u.GetDexterity ();
-		backDodge = u.GetDexterity ();
+		dodge[(int)Attack.Direction.Front] = 25 + u.GetDexterity ();
+		dodge[(int)Attack.Direction.Side] = 10 + u.GetDexterity ();
+		dodge[(int)Attack.Direction.Back] = u.GetDexterity ();
 		phyisicalAim = 80 + u.GetDexterity ();
 		
 		// Int Related Attributes

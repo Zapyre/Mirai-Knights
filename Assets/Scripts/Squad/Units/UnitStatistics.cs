@@ -1,24 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 
-public abstract class Type {
-	// General
-	protected string name;
-
+public abstract class UnitStatistics {
 	// Str Related Attributes
 	protected int physicalAttack;
 	protected int physicalRange;
 	protected int [] block = new int [Enum.GetNames(typeof(Attack.Direction)).Length];
-	protected int frontBlock;
-	protected int sideBlock;
-	protected int backBlock;
 
 	// Dex Related Attributes
 	protected int speed;
-	protected int frontDodge;
-	protected int sideDodge;
-	protected int backDodge;
+	protected int [] dodge = new int [Enum.GetNames(typeof(Attack.Direction)).Length];
 	protected int phyisicalAim;
 
 	// Int Related Attributes
@@ -38,21 +30,16 @@ public abstract class Type {
 
 	//----------------------------------------------------------//
 
-	// Getters
-	public string GetName () { return name; }
+	// Getters and Setters
 
 	public int GetPhysicalAttack () { return physicalAttack; }
 	public int GetPhysicalRange () { return physicalRange; }
-	public int GetFrontBlock () { return frontBlock; }
-	public int GetSideBlock () { return sideBlock; }
-	public int GetBackBlock () { return backBlock; }
+	public int GetBlock (int dir) { return block [dir]; }
 
 	public int GetSpeed () { return speed; }
-	public int GetFrontDodge () { return frontDodge; }
-	public int GetSideDodge () { return sideDodge; }
-	public int GetBackDodge () { return backDodge; }
+	public int GetDodge (int dir) { return dodge [dir]; }
 	public int GetPhyisicalAim () { return phyisicalAim; }
-	
+
 	public int GetMagicAttack () { return magicAttack; }
 	public int GetMagicAim () { return magicAim; }
 	public int GetMagicRange () { return magicRange; }

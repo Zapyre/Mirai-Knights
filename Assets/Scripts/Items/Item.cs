@@ -1,19 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using System;
+
 public abstract class Item {
 	public enum ItemType { Weapon, Armor, Consumable };
 	protected string name;
 
 	protected int physicalAttack;
 	protected int physicalRange;
-	protected int frontBlock;
-	protected int sideBlock;
-	protected int backBlock;
+	protected int [] block = new int [Enum.GetNames(typeof(Attack.Direction)).Length];
 
 	protected int speed;
-	protected int frontDodge;
-	protected int sideDodge;
-	protected int backDodge;
+	protected int [] dodge = new int [Enum.GetNames(typeof(Attack.Direction)).Length];
 	protected int phyisicalAim;
 
 	protected int magicAttack;
@@ -33,14 +31,10 @@ public abstract class Item {
 
 	public int GetPhysicalAttack () { return physicalAttack; }
 	public int GetPhysicalRange () { return physicalRange; }
-	public int GetFrontBlock () { return frontBlock; }
-	public int GetSideBlock () { return sideBlock; }
-	public int GetBackBlock () { return backBlock; }
+	public int GetBlock (int dir) { return block [dir]; }
 
 	public int GetSpeed () { return speed; }
-	public int GetFrontDodge () { return frontDodge; }
-	public int GetSideDodge () { return sideDodge; }
-	public int GetBackDodge () { return backDodge; }
+	public int GetDodge (int dir) { return dodge [dir]; }
 	public int GetPhyisicalAim () { return phyisicalAim; }
 
 	public int GetMagicAttack () { return magicAttack; }

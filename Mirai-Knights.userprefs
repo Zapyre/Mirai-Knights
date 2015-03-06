@@ -1,22 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Types\Type.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Maps\Map.cs">
     <Files>
-      <File FileName="Assets\Scripts\Attacks\BasicPhysicalAttack.cs" Line="23" Column="83" />
-      <File FileName="Assets\Scripts\Units\Unit.cs" Line="2" Column="26" />
-      <File FileName="Assets\Scripts\Types\Type.cs" Line="7" Column="24" />
-      <File FileName="Assets\Scripts\Items\Item.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Armors\Armor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Attacks\ManaBlast.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Types\Apprentice.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Weapons\Weapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Weapons\WoodenShield.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Weapons\WoodenSword.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Weapons\WoodenBow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Weapons\WoodenCane.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Units\Elf.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utilities\UnitUtils.cs" Line="3" Column="1" />
-      <File FileName="Assets\Scripts\Attacks\Attack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Landmark.cs" Line="4" Column="17" />
+      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Units\Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" Line="5" Column="24" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\TownMenu.cs" Line="4" Column="7" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Wildlands.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\WildlandsMenu.cs" Line="4" Column="7" />
+      <File FileName="Assets\Scripts\Maps\Map.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

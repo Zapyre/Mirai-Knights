@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Tinker : Type{
+public class Tinker : UnitType{
 	public Tinker (Unit u){
 		// General
 		name = "Tinker";
@@ -9,15 +9,15 @@ public class Tinker : Type{
 		// Str Related Attributes
 		physicalAttack = 8 + u.GetStrength ();
 		physicalRange = 1 + (int)(u.GetStrength () / 5);
-		frontBlock = 30 + u.GetStrength (); // Only occurs with shield equiped
-		sideBlock = 10 + u.GetStrength ();
-		backBlock = u.GetStrength ();
+		block[(int)Attack.Direction.Front] = 30 + u.GetStrength (); // Only occurs with shield equiped
+		block[(int)Attack.Direction.Side] = 10 + u.GetStrength ();
+		block[(int)Attack.Direction.Back] = u.GetStrength ();
 		
 		// Dex Related Attributes
 		speed = 3 + (int)(u.GetDexterity () / 5);
-		frontDodge = 50 + u.GetDexterity ();
-		sideDodge = 10 + u.GetDexterity ();
-		backDodge = u.GetDexterity ();
+		dodge[(int)Attack.Direction.Front] = 50 + u.GetDexterity ();
+		dodge[(int)Attack.Direction.Side] = 10 + u.GetDexterity ();
+		dodge[(int)Attack.Direction.Back] = u.GetDexterity ();
 		phyisicalAim = 95 + u.GetDexterity ();
 		
 		// Int Related Attributes

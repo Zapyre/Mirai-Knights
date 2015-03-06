@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Soldier : Type{
+public class Soldier : UnitType{
 	public Soldier (Unit u) {
 		// General
 		name = "Soldier";
@@ -9,15 +9,15 @@ public class Soldier : Type{
 		// Str Related Attributes
 		physicalAttack = 10 + u.GetStrength ();
 		physicalRange = 0 + (int)(u.GetStrength () / 5);
-		frontBlock = 50 + u.GetStrength (); // Only occurs with shield equiped
-		sideBlock = 10 + u.GetStrength ();
-		backBlock = u.GetStrength ();
+		block[(int)Attack.Direction.Front] = 50 + u.GetStrength (); // Only occurs with shield equiped
+		block[(int)Attack.Direction.Side] = 10 + u.GetStrength ();
+		block[(int)Attack.Direction.Back] = u.GetStrength ();
 
 		// Dex Related Attributes
 		speed = 2 + (int)(u.GetDexterity () / 5);
-		frontDodge = 50 + u.GetDexterity ();
-		sideDodge = 10 + u.GetDexterity ();
-		backDodge = u.GetDexterity ();
+		dodge[(int)Attack.Direction.Front] = 50 + u.GetDexterity ();
+		dodge[(int)Attack.Direction.Side] = 10 + u.GetDexterity ();
+		dodge[(int)Attack.Direction.Back] = u.GetDexterity ();
 		phyisicalAim = 100 + u.GetDexterity ();
 
 		// Int Related Attributes
