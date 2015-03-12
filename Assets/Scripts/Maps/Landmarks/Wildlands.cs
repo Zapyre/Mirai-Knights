@@ -2,10 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class Wildlands : Landmark {
-	public Wildlands (Vector2 pos, ArrayList landmarkList){
-		name = "The Wildlands";
+	public Wildlands (string n, Vector2 pos, ArrayList landmarkList){
+		name = n;
 		position = pos;
-		landmarkConnectionList = landmarkList;
 		menu = new WildlandsMenu ();
 	}
 }
