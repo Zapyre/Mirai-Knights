@@ -5,6 +5,7 @@ using System;
 public abstract class Item {
 	public enum ItemType { Weapon, Armor, Consumable };
 	protected string name;
+	protected string description;
 
 	protected int physicalAttack;
 	protected int physicalRange;
