@@ -61,13 +61,16 @@
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenCane.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
+     <Compile Include="Assets\Scripts\Maps\Connections\Connection.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Landmark.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\TownMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\WildlandsMenu.cs" />
+     <Compile Include="Assets\Scripts\Maps\Landmarks\Town.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Wildlands.cs" />
      <Compile Include="Assets\Scripts\Maps\Map.cs" />
+     <Compile Include="Assets\Scripts\Maps\Thevorest.cs" />
      <Compile Include="Assets\Scripts\Squad\Squad.cs" />
      <Compile Include="Assets\Scripts\Squad\Units\Achievements\Achievement.cs" />
      <Compile Include="Assets\Scripts\Squad\Units\Achievements\BattleHardened.cs" />

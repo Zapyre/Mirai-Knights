@@ -1,12 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class Map {
+public class Connection {
 	protected ArrayList landmarkList;
-	protected ArrayList connectionList;
+	protected string name;
+
+	public Connection (ArrayList ll, string n){
+		landmarkList = ll;
+		name = n;
+	}
 
 	public ArrayList GetLandmarkList (){ return landmarkList; }
 	public void SetLandmarkList (ArrayList ll) { landmarkList = ll; }
-	public ArrayList GetConnectionList (){ return connectionList; }
-	public void SetConnectionList (ArrayList cl) { connectionList = cl; }
 }
