@@ -65,8 +65,10 @@
      <Compile Include="Assets\Scripts\Maps\Landmarks\Landmark.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" />
+     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\RuinsMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\TownMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\WildlandsMenu.cs" />
+     <Compile Include="Assets\Scripts\Maps\Landmarks\Ruins.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Town.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Wildlands.cs" />
      <Compile Include="Assets\Scripts\Maps\Map.cs" />
