@@ -8,6 +8,7 @@ public abstract class Landmark {
 	protected ArrayList landmarkConnectionList;
 	protected Menu menu;
 	protected bool hostile;
+	protected bool shown;
 
 	// Getters and Setters
 	public Texture GetLandmarkPortrait () { return landmarkPortrait; }
@@ -22,4 +23,6 @@ public abstract class Landmark {
 	public void SetMenu (Menu m) { menu = m; }
 	public bool isHostile () { return hostile; }
 	public void setHostile (bool h) { hostile = h; }
+	public bool isShown () { return shown; }
+	public void setShown (bool s) { shown = s; }
 }

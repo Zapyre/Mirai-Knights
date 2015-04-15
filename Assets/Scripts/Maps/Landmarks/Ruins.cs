@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Ruins : Landmark {
-	public Ruins (string n, Vector2 pos, bool hostile){
+	public Ruins (string n, Vector2 pos, bool hostile, bool show){
 		name = n;
 		position = pos;
 		if (hostile) {
@@ -10,6 +10,7 @@ public class Ruins : Landmark {
 		} else {
 		menu = new RuinsMenu ();
 		}
+		shown = show;
 	}
 }
 

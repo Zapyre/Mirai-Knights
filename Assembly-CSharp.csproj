@@ -62,7 +62,9 @@
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
      <Compile Include="Assets\Scripts\Maps\Connections\Connection.cs" />
+     <Compile Include="Assets\Scripts\Maps\Landmarks\Castle.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Landmark.cs" />
+     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\CastleMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\RuinsMenu.cs" />
