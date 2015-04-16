@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Attacks\Attack.cs" />
      <Compile Include="Assets\Scripts\Attacks\BasicPhysicalAttack.cs" />
      <Compile Include="Assets\Scripts\Attacks\ManaBlast.cs" />
+     <Compile Include="Assets\Scripts\GuiScripts\ShopGui.cs" />
      <Compile Include="Assets\Scripts\Items\Armors\Armor.cs" />
      <Compile Include="Assets\Scripts\Items\Armors\BentGreaves.cs" />
      <Compile Include="Assets\Scripts\Items\Armors\OldHelmet.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Scripts\Maps\Landmarks\Wildlands.cs" />
      <Compile Include="Assets\Scripts\Maps\Map.cs" />
      <Compile Include="Assets\Scripts\Maps\Thevorest.cs" />
+     <Compile Include="Assets\Scripts\Shop\ShopKeeper.cs" />
      <Compile Include="Assets\Scripts\Squad\Squad.cs" />
      <Compile Include="Assets\Scripts\Squad\Units\Achievements\Achievement.cs" />
      <Compile Include="Assets\Scripts\Squad\Units\Achievements\BattleHardened.cs" />

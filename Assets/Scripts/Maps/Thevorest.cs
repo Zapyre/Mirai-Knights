@@ -18,32 +18,32 @@ public class Thevorest : Map {
 		ArrayList tempLandmarkList = new ArrayList ();
 		tempLandmarkList.Add (ruinedTown);
 		tempLandmarkList.Add(grasslands);
-		Connection con = new Connection (tempLandmarkList, "Path to the meadows");
+		Connection con = new Connection (tempLandmarkList, "Path to the meadows", 1f);
 		connectionList.Add (con);
 
 		tempLandmarkList = new ArrayList ();
 		tempLandmarkList.Add(grasslands);
 		tempLandmarkList.Add(wildlands);
 		tempLandmarkList.Add(forest);
-		con = new Connection (tempLandmarkList, "Forked path");
+		con = new Connection (tempLandmarkList, "Forked path", 3f);
 		connectionList.Add (con);
 
 		tempLandmarkList = new ArrayList ();
 		tempLandmarkList.Add(forest);
 		tempLandmarkList.Add(hiddenCamp);
-		con = new Connection (tempLandmarkList, "Shadowy thicket trail");
+		con = new Connection (tempLandmarkList, "Shadowy thicket trail", 2f);
 		connectionList.Add (con);
 
 		tempLandmarkList = new ArrayList ();
 		tempLandmarkList.Add(hiddenCamp);
 		tempLandmarkList.Add(fortThevorest);
-		con = new Connection (tempLandmarkList, "Secret path to the castle");
+		con = new Connection (tempLandmarkList, "Secret path to the castle", 1.5f);
 		connectionList.Add (con);
 
 		tempLandmarkList = new ArrayList ();
 		tempLandmarkList.Add(wildlands);
 		tempLandmarkList.Add(fortThevorest);
-		con = new Connection (tempLandmarkList, "Bricked path");
+		con = new Connection (tempLandmarkList, "Bricked path", 2.5f);
 		connectionList.Add (con);
 
 		// Landmark Listing

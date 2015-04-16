@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System;
 
-public abstract class Item {
+public class Item {
 	public enum ItemType { Weapon, Armor, Consumable };
 	protected string name;
 	protected string description;
@@ -26,9 +26,12 @@ public abstract class Item {
 	protected int jump;
 	protected int physicalArmor;
 	protected int magicArmor;
+
+	protected int amount;
 	
-	// Getters
+	// Getters and Setters
 	public string GetName () { return name; }
+	public void SetName (string n) { name = n; }
 
 	public int GetPhysicalAttack () { return physicalAttack; }
 	public int GetPhysicalRange () { return physicalRange; }
@@ -49,4 +52,17 @@ public abstract class Item {
 	public int GetJump () { return jump; }
 	public int GetPhysicalArmor () { return physicalArmor; }
 	public int GetMagicArmor () { return magicArmor; }
+
+	public int GetAmount () { return amount; }
+	public void SetAmount (int a) { amount = a; }
+
+	public Item (){}
+	public Item (string n, int a){
+		name = n;
+		amount = a;
+	}
+
+	public Item DupItem (){
+		return new Item(this.GetName(), this.GetAmount());
+	}
 }
