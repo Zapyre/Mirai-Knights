@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Thevorest : Map {
-	public Thevorest (){
+	public Thevorest () {
 		connectionList = new ArrayList ();
 		landmarkList = new ArrayList ();
 

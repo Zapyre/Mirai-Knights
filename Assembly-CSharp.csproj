@@ -49,6 +49,10 @@
      <Compile Include="Assets\Scripts\Attacks\Attack.cs" />
      <Compile Include="Assets\Scripts\Attacks\BasicPhysicalAttack.cs" />
      <Compile Include="Assets\Scripts\Attacks\ManaBlast.cs" />
+     <Compile Include="Assets\Scripts\Buttons\Button.cs" />
+     <Compile Include="Assets\Scripts\Buttons\ContinueButton.cs" />
+     <Compile Include="Assets\Scripts\Buttons\NewGameButton.cs" />
+     <Compile Include="Assets\Scripts\Buttons\OptionButton.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\ShopGui.cs" />
      <Compile Include="Assets\Scripts\Items\Armors\Armor.cs" />
      <Compile Include="Assets\Scripts\Items\Armors\BentGreaves.cs" />
@@ -62,6 +66,9 @@
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenCane.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
+     <Compile Include="Assets\Scripts\Managers\GUIManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\MainManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\SquadManager.cs" />
      <Compile Include="Assets\Scripts\Maps\Connections\Connection.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Castle.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Landmark.cs" />

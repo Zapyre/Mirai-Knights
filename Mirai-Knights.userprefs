@@ -1,27 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Items\Item.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Buttons\ContinueButton.cs">
     <Files>
-      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Thevorest.cs" Line="28" Column="43" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Landmark.cs" Line="27" Column="46" />
       <File FileName="Assets\Scripts\Maps\Map.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\CastleMenu.cs" Line="8" Column="42" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\RuinsMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\TownMenu.cs" Line="6" Column="39" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\WildlandsMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Castle.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Ruins.cs" Line="5" Column="62" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Town.cs" Line="5" Column="63" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Wildlands.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Connections\Connection.cs" Line="15" Column="24" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Shop\ShopKeeper.cs" Line="15" Column="35" />
-      <File FileName="Assets\Scripts\Items\Item.cs" Line="59" Column="17" />
-      <File FileName="Assets\Scripts\GuiScripts\ShopGui.cs" Line="17" Column="6" />
-      <File FileName="Assets\Scripts\Items\Armors\Armor.cs" Line="3" Column="17" />
-      <File FileName="Assets\Scripts\Items\Weapons\Weapon.cs" Line="3" Column="1" />
+      <File FileName="Assets\Scripts\Maps\Thevorest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\MainManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="29" Column="16" />
+      <File FileName="Assets\Scripts\Utilities\UnitUtils.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Buttons\Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Buttons\ContinueButton.cs" Line="9" Column="17" />
+      <File FileName="Assets\Scripts\Buttons\NewGameButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Buttons\OptionButton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
