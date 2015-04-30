@@ -7,6 +7,7 @@ public class NewGameButton : Button{
 	}
 	
 	public override void Action (){
-		Debug.Log("New Game Pressed");
+		CreateCharacterGui.InitGUI ();
+		GUIManager.curMode = GUIManager.Mode.Create;
 	}
 }
