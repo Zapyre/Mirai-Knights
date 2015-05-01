@@ -3,10 +3,10 @@ using System.Collections;
 
 public class CreateCharacterButton : Button{
 	public CreateCharacterButton (){
-		name = "Create Character";
+		name = "Create Squad and Character";
 	}
 	
 	public override void Action (){
-		Debug.Log("Create Character");
+		SquadManager.CreateNewSquad (CreateCharacterGui.squadName, 0, 0);
 	}
 }
