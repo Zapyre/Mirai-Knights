@@ -7,27 +7,35 @@ public static class CreateCharacterGui {
 	private static float currentTime;
 	private static float timerCount;
 	private static float timeInc;
+	public static string squadName;
+	public static string charName;
 
 	public static void InitGUI () {
 		MainMenuButton mmb = new MainMenuButton ();
 		CreateCharacterButton ccb = new CreateCharacterButton ();
+
+		squadName = "";
+		charName = "";
 		
 		buttonList = new ArrayList ();
 		buttonList.Add (mmb);
 		buttonList.Add (ccb);
 				
+		RefreshTimer ();
+	}
+
+	public static void RefreshTimer (){
 		selection = 0;
 		timeInc = 0.25f;
 		currentTime = Time.time;
 		timerCount = currentTime + timeInc;
-
 	}
 	
 	public static void DrawGUI (){
 		currentTime = Time.time;
 		if (Input.GetKey ("space") && currentTime > timerCount) {
-			((Button)buttonList[selection]).Action ();
 			timerCount = currentTime + timeInc;
+			((Button)buttonList[selection]).Action ();
 		}
 		if ((Input.GetKey ("left") || Input.GetKey ("up")) && currentTime > timerCount) {
 			selection--;
@@ -47,9 +55,9 @@ public static class CreateCharacterGui {
 		GUI.skin.label.alignment = TextAnchor.MiddleCenter;
 		GUI.Label (new Rect (GUIManager.gridWidth * 4, (GUIManager.gridHeight + GUIManager.padding) * 0, GUIManager.gridWidth, GUIManager.gridHeight), "Character Creation");
 		GUI.Label (new Rect (GUIManager.gridWidth * 3, (GUIManager.gridHeight + GUIManager.padding) * 1, GUIManager.gridWidth, GUIManager.gridHeight), "Squad Name");
-		GUI.TextField (new Rect (GUIManager.gridWidth * 4, (GUIManager.gridHeight + GUIManager.padding) * 1, GUIManager.gridWidth * 2, GUIManager.gridHeight), "Squad Name", 25);
+		squadName = GUI.TextField (new Rect (GUIManager.gridWidth * 4, (GUIManager.gridHeight + GUIManager.padding) * 1, GUIManager.gridWidth * 2, GUIManager.gridHeight), squadName, 25);
 		GUI.Label (new Rect (GUIManager.gridWidth * 3, (GUIManager.gridHeight + GUIManager.padding) * 2, GUIManager.gridWidth, GUIManager.gridHeight), "Character Name");
-		GUI.TextField (new Rect (GUIManager.gridWidth * 4, (GUIManager.gridHeight + GUIManager.padding) * 2, GUIManager.gridWidth * 2, GUIManager.gridHeight), "Character Name", 25);
+		charName = GUI.TextField (new Rect (GUIManager.gridWidth * 4, (GUIManager.gridHeight + GUIManager.padding) * 2, GUIManager.gridWidth * 2, GUIManager.gridHeight), charName, 25);
 
 		for (int i = 0; i < buttonList.Count; i++) {
 			if (i == selection){

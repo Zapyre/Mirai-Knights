@@ -7,7 +7,7 @@ public class NewGameButton : Button{
 	}
 	
 	public override void Action (){
-		CreateCharacterGui.InitGUI ();
+		CreateCharacterGui.RefreshTimer ();
 		GUIManager.curMode = GUIManager.Mode.Create;
 	}
 }

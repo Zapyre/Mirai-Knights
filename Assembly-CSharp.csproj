@@ -1,110 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	<ProductVersion>10.0.20506</ProductVersion>
-	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{99C48C25-1B86-9D36-29D3-D6C699A61423}</ProjectGuid>
-	<OutputType>Library</OutputType>
-	<AppDesignerFolder>Properties</AppDesignerFolder>
-	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
-	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-	<FileAlignment>512</FileAlignment>
-	<BaseDirectory>Assets</BaseDirectory>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99C48C25-1B86-9D36-29D3-D6C699A61423}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-	<DebugSymbols>true</DebugSymbols>
-	<DebugType>full</DebugType>
-	<Optimize>false</Optimize>
-	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_5;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_4_5_5;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	<DebugType>pdbonly</DebugType>
-	<Optimize>true</Optimize>
-	<OutputPath>Temp\bin\Release\</OutputPath>
-	<DefineConstants>TRACE</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="System" />
-    <Reference Include="System.XML" />
-	<Reference Include="System.Core" />
-	<Reference Include="System.Xml.Linq" />
-	<Reference Include="UnityEngine">
-	  <HintPath>D:/Unity/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>D:/Unity/Data/Managed/UnityEditor.dll</HintPath>
-	</Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Unity\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:\Unity\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Attacks\Attack.cs" />
-     <Compile Include="Assets\Scripts\Attacks\BasicPhysicalAttack.cs" />
-     <Compile Include="Assets\Scripts\Attacks\ManaBlast.cs" />
-     <Compile Include="Assets\Scripts\Buttons\Button.cs" />
-     <Compile Include="Assets\Scripts\Buttons\ContinueButton.cs" />
-     <Compile Include="Assets\Scripts\Buttons\CreateCharacterButton.cs" />
-     <Compile Include="Assets\Scripts\Buttons\MainMenuButton.cs" />
-     <Compile Include="Assets\Scripts\Buttons\NewGameButton.cs" />
-     <Compile Include="Assets\Scripts\Buttons\OptionButton.cs" />
-     <Compile Include="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" />
-     <Compile Include="Assets\Scripts\GuiScripts\MainMenuGui.cs" />
-     <Compile Include="Assets\Scripts\GuiScripts\ShopGui.cs" />
-     <Compile Include="Assets\Scripts\Items\Armors\Armor.cs" />
-     <Compile Include="Assets\Scripts\Items\Armors\BentGreaves.cs" />
-     <Compile Include="Assets\Scripts\Items\Armors\OldHelmet.cs" />
-     <Compile Include="Assets\Scripts\Items\Armors\RustyLeggings.cs" />
-     <Compile Include="Assets\Scripts\Items\Armors\TornGauntlets.cs" />
-     <Compile Include="Assets\Scripts\Items\Armors\WornChestguard.cs" />
-     <Compile Include="Assets\Scripts\Items\Item.cs" />
-     <Compile Include="Assets\Scripts\Items\Weapons\Weapon.cs" />
-     <Compile Include="Assets\Scripts\Items\Weapons\WoodenBow.cs" />
-     <Compile Include="Assets\Scripts\Items\Weapons\WoodenCane.cs" />
-     <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
-     <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
-     <Compile Include="Assets\Scripts\Managers\GUIManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\MainManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\SquadManager.cs" />
-     <Compile Include="Assets\Scripts\Maps\Connections\Connection.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Castle.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Landmark.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\CastleMenu.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\RuinsMenu.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\TownMenu.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\WildlandsMenu.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Ruins.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Town.cs" />
-     <Compile Include="Assets\Scripts\Maps\Landmarks\Wildlands.cs" />
-     <Compile Include="Assets\Scripts\Maps\Map.cs" />
-     <Compile Include="Assets\Scripts\Maps\Thevorest.cs" />
-     <Compile Include="Assets\Scripts\Shop\ShopKeeper.cs" />
-     <Compile Include="Assets\Scripts\Squad\Squad.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Achievements\Achievement.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Achievements\BattleHardened.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Achievements\Commander.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Achievements\Sniper.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Elf.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Golem.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Human.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Protonoid.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Types\Apprentice.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Types\Novice.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Types\Soldier.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Types\Tinker.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Types\UnitType.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\Unit.cs" />
-     <Compile Include="Assets\Scripts\Squad\Units\UnitStatistics.cs" />
-     <Compile Include="Assets\Scripts\Utilities\UnitUtils.cs" />
+    <Compile Include="Assets\Scripts\Attacks\Attack.cs" />
+    <Compile Include="Assets\Scripts\Attacks\BasicPhysicalAttack.cs" />
+    <Compile Include="Assets\Scripts\Attacks\ManaBlast.cs" />
+    <Compile Include="Assets\Scripts\Buttons\Button.cs" />
+    <Compile Include="Assets\Scripts\Buttons\ContinueButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\CreateCharacterButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\MainMenuButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\NewGameButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\OptionButton.cs" />
+    <Compile Include="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" />
+    <Compile Include="Assets\Scripts\GuiScripts\MainMenuGui.cs" />
+    <Compile Include="Assets\Scripts\GuiScripts\ShopGui.cs" />
+    <Compile Include="Assets\Scripts\Items\Armors\Armor.cs" />
+    <Compile Include="Assets\Scripts\Items\Armors\BentGreaves.cs" />
+    <Compile Include="Assets\Scripts\Items\Armors\OldHelmet.cs" />
+    <Compile Include="Assets\Scripts\Items\Armors\RustyLeggings.cs" />
+    <Compile Include="Assets\Scripts\Items\Armors\TornGauntlets.cs" />
+    <Compile Include="Assets\Scripts\Items\Armors\WornChestguard.cs" />
+    <Compile Include="Assets\Scripts\Items\Item.cs" />
+    <Compile Include="Assets\Scripts\Items\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Items\Weapons\WoodenBow.cs" />
+    <Compile Include="Assets\Scripts\Items\Weapons\WoodenCane.cs" />
+    <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
+    <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
+    <Compile Include="Assets\Scripts\Managers\GUIManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\MainManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\SquadManager.cs" />
+    <Compile Include="Assets\Scripts\Maps\Connections\Connection.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Castle.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Landmark.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\CastleMenu.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\RuinsMenu.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\TownMenu.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\WildlandsMenu.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Ruins.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Town.cs" />
+    <Compile Include="Assets\Scripts\Maps\Landmarks\Wildlands.cs" />
+    <Compile Include="Assets\Scripts\Maps\Map.cs" />
+    <Compile Include="Assets\Scripts\Maps\Thevorest.cs" />
+    <Compile Include="Assets\Scripts\Shop\ShopKeeper.cs" />
+    <Compile Include="Assets\Scripts\Squad\Squad.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Achievements\Achievement.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Achievements\BattleHardened.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Achievements\Commander.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Achievements\Sniper.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Elf.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Golem.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Human.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Protonoid.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Types\Apprentice.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Types\Novice.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Types\Soldier.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Types\Tinker.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Types\UnitType.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\Unit.cs" />
+    <Compile Include="Assets\Scripts\Squad\Units\UnitStatistics.cs" />
+    <Compile Include="Assets\Scripts\Utilities\UnitUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -114,5 +113,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

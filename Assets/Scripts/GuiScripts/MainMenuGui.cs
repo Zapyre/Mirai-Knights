@@ -18,6 +18,10 @@ public static class MainMenuGui {
 		buttonList.Add (nb);
 		buttonList.Add (ob);
 		
+		RefreshTimer ();
+	}
+
+	public static void RefreshTimer (){
 		selection = 0;
 		timeInc = 0.25f;
 		currentTime = Time.time;
@@ -27,8 +31,8 @@ public static class MainMenuGui {
 	public static void DrawGUI (){
 		currentTime = Time.time;
 		if (Input.GetKey ("space") && currentTime > timerCount) {
-			((Button)buttonList[selection]).Action ();
 			timerCount = currentTime + timeInc;
+			((Button)buttonList[selection]).Action ();
 		}
 		if ((Input.GetKey ("left") || Input.GetKey ("up")) && currentTime > timerCount) {
 			selection--;

@@ -8,5 +8,6 @@ public class MainMenuButton : Button{
 	
 	public override void Action (){
 		GUIManager.curMode = GUIManager.Mode.Main;
+		MainMenuGui.RefreshTimer ();
 	}
 }

@@ -21,7 +21,7 @@ public static class GUIManager {
 		curMode = Mode.Main;
 
 		MainMenuGui.InitGUI ();
-		//CreateCharacterGui.InitGUI ();
+		CreateCharacterGui.InitGUI ();
 	}
 
 	public static void DrawGUI (){
