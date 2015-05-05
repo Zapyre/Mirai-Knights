@@ -11,7 +11,7 @@ public static class GUIManager {
 	private static float timerCount;
 	private static float timeInc;
 
-	public enum Mode {Main, Create, Option};
+	public enum Mode {Main, Create, Option, World};
 	public static Mode curMode;
 
 	public static void InitGUI () {
@@ -22,14 +22,18 @@ public static class GUIManager {
 
 		MainMenuGui.InitGUI ();
 		CreateCharacterGui.InitGUI ();
+		WorldMapGui.InitGUI ();
 	}
 
 	public static void DrawGUI (){
 		if (curMode == Mode.Main){
 			MainMenuGui.DrawGUI();
 		}
-		if (curMode == Mode.Create) {
+		else if (curMode == Mode.Create) {
 			CreateCharacterGui.DrawGUI();
+		}
+		else if (curMode == Mode.World){
+			WorldMapGui.DrawGUI();
 		}
 	}
 }

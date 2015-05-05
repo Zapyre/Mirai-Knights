@@ -7,6 +7,8 @@ public class CreateCharacterButton : Button{
 	}
 	
 	public override void Action (){
-		SquadManager.CreateNewSquad (CreateCharacterGui.squadName, 0, 0);
+		Human u = new Human (CreateCharacterGui.charName, null);
+		SquadManager.CreateNewSquad (u, CreateCharacterGui.squadName, 0, 0);
+		GUIManager.curMode = GUIManager.Mode.World;
 	}
 }

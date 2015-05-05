@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Protonoid : Unit{
-	public Protonoid (string name, Texture unitPortrait, UnitType unitType){
+	public Protonoid (string name, Texture unitPortrait){
 		strength = 2;
 		dexterity = 3;
 		intelligence = 5;

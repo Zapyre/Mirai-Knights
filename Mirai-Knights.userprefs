@@ -1,16 +1,30 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GuiScripts\CreateCharacterGui.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Buttons\LandmarkButton.cs">
     <Files>
-      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="7" Column="30" />
-      <File FileName="Assets\Scripts\GuiScripts\MainMenuGui.cs" Line="27" Column="27" />
-      <File FileName="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" Line="69" Column="222" />
-      <File FileName="Assets\Scripts\Buttons\CreateCharacterButton.cs" Line="10" Column="60" />
-      <File FileName="Assets\Scripts\Buttons\ContinueButton.cs" Line="9" Column="33" />
-      <File FileName="Assets\Scripts\Buttons\MainMenuButton.cs" Line="11" Column="3" />
-      <File FileName="Assets\Scripts\Buttons\NewGameButton.cs" Line="9" Column="33" />
-      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="19" Column="41" />
-      <File FileName="Assets\Scripts\Managers\SquadManager.cs" Line="7" Column="26" />
+      <File FileName="Assets\Scripts\Buttons\Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="25" Column="26" />
+      <File FileName="Assets\Scripts\GuiScripts\MainMenuGui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Buttons\CreateCharacterButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="3" Column="1" />
+      <File FileName="Assets\Scripts\Managers\SquadManager.cs" Line="19" Column="3" />
+      <File FileName="Assets\Scripts\Squad\Units\Human.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Units\Types\UnitType.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Units\Types\Novice.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Units\Unit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Units\Golem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Units\Elf.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Squad\Units\Protonoid.cs" Line="5" Column="53" />
+      <File FileName="Assets\Scripts\GuiScripts\WorldMapGui.cs" Line="17" Column="23" />
+      <File FileName="Assets\Scripts\Maps\Thevorest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\MapManager.cs" Line="10" Column="6" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Landmark.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Ruins.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Shop\ShopKeeper.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\MainManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Buttons\LandmarkButton.cs" Line="6" Column="19" />
+      <File FileName="Assets\Scripts\Buttons\MainMenuButton.cs" Line="12" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
