@@ -10,6 +10,10 @@ public class LandmarkButton : Button{
 		name = n;
 		position = new Vector2 (x, y);
 	}
+
+	public LandmarkButton (Landmark lm){
+		position = lm.GetPosition ();
+	}
 	
 	public override void Action (){
 		Debug.Log ("Landmark " + name + " Clicked!");

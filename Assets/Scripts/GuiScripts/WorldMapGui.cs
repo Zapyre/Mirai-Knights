@@ -3,6 +3,7 @@ using System.Collections;
 
 public static class WorldMapGui {
 	private static ArrayList buttonList;
+	private static ArrayList conList;
 	private static int selection;
 	private static float currentTime;
 	private static float timerCount;
@@ -11,9 +12,27 @@ public static class WorldMapGui {
 	private static Map curMap;
 	private static int buttonSize;
 
+	private static Texture2D point;
+
 	public static void InitGUI () {
+		// Init point texture
+		 point = new Texture2D(2, 2, TextureFormat.ARGB32, false);
+		// set the pixel values
+		point.SetPixel(0, 0, Color.black);
+		point.SetPixel(1, 0, Color.black);
+		point.SetPixel(2, 0, Color.black);
+		point.SetPixel(0, 1, Color.black);
+		point.SetPixel(1, 1, Color.black);
+		point.SetPixel(2, 1, Color.black);
+		point.SetPixel(0, 2, Color.black);
+		point.SetPixel(1, 2, Color.black);
+		point.SetPixel(2, 2, Color.black);
+		// Apply all SetPixel calls
+		point.Apply();
+
 		curMap = MapManager.curMap;
 		ArrayList landmarkList = curMap.GetLandmarkList ();
+		conList = curMap.GetConnectionList ();
 
 
 		buttonList = new ArrayList ();
@@ -54,6 +73,21 @@ public static class WorldMapGui {
 			}
 			timerCount = currentTime + timeInc;
 		}
+
+		for (int i = 0; i < conList.Count; i++) {
+			GUI.color = Color.white;
+			ArrayList landmarkList = ((Connection)conList[i]).GetLandmarkList();
+			Vector2 midpoint = new Vector2 (0,0);
+			for (int j = 0; j < landmarkList.Count; j++){
+				midpoint += (((Landmark)landmarkList[j]).GetPosition () + new Vector2(5,5)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2);
+			}
+			midpoint /= landmarkList.Count;
+
+			for (int j = 0; j < landmarkList.Count; j++){
+				DrawLine ((((Landmark)landmarkList[j]).GetPosition() + new Vector2(5,5)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2), midpoint, 10);
+			}
+		}
+
 		for (int i = 0; i < buttonList.Count; i++) {
 			if (i == selection){
 				GUI.color = Color.yellow;
@@ -66,7 +100,22 @@ public static class WorldMapGui {
 			}
 			if (GUI.Button (new Rect ((((Button)buttonList[i]).GetPosition().x + 5) * buttonSize, (((Button)buttonList[i]).GetPosition().y + 5) * buttonSize, buttonSize, buttonSize), ((Button)buttonList[i]).GetName())) {
 				((Button)buttonList[i]).Action ();
+				selection = i;
 			}
 		}
+	}
+
+	private static void DrawLine(Vector2 start, Vector2 end, int width)
+	{
+		Vector2 d = end - start;
+		float a = Mathf.Rad2Deg * Mathf.Atan(d.y / d.x);
+		if (d.x < 0)
+			a += 180;
+		
+		int width2 = (int) Mathf.Ceil(width / 2);
+		
+		GUIUtility.RotateAroundPivot(a, start);
+		GUI.DrawTexture(new Rect(start.x, start.y - width2, d.magnitude, width), point);
+		GUIUtility.RotateAroundPivot(-a, start);
 	}
 }
