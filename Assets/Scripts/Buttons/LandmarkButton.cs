@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class LandmarkButton : Button{
+	Landmark landmark;
 	public LandmarkButton (){
 		name = "Landmark";
 	}
@@ -12,6 +13,7 @@ public class LandmarkButton : Button{
 	}
 
 	public LandmarkButton (Landmark lm){
+		landmark = lm;
 		position = lm.GetPosition ();
 	}
 	

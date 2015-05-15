@@ -16,7 +16,7 @@ public static class WorldMapGui {
 
 	public static void InitGUI () {
 		// Init point texture
-		 point = new Texture2D(2, 2, TextureFormat.ARGB32, false);
+		 point = new Texture2D(3, 3, TextureFormat.ARGB32, false);
 		// set the pixel values
 		point.SetPixel(0, 0, Color.black);
 		point.SetPixel(1, 0, Color.black);
