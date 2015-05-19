@@ -7,17 +7,17 @@ public class LandmarkButton : Button{
 		name = "Landmark";
 	}
 
-	public LandmarkButton (string n, float x, float y){
-		name = n;
-		position = new Vector2 (x, y);
-	}
-
 	public LandmarkButton (Landmark lm){
 		landmark = lm;
 		position = lm.GetPosition ();
+		name = lm.GetName ();
 	}
 	
 	public override void Action (){
 		Debug.Log ("Landmark " + name + " Clicked!");
+		WorldMapGui.curLandmark = landmark;
+		if (SquadManager.curSquad.GetCurLoc ().GetName () == landmark.GetName()) {
+			WorldMapGui.curLandmark = null;
+		}
 	}
 }

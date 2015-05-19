@@ -13,10 +13,13 @@ public static class WorldMapGui {
 	private static int buttonSize;
 
 	private static Texture2D point;
+	 
+	public static Landmark curLandmark;
+
 
 	public static void InitGUI () {
 		// Init point texture
-		 point = new Texture2D(3, 3, TextureFormat.ARGB32, false);
+		point = new Texture2D(3, 3, TextureFormat.ARGB32, false);
 		// set the pixel values
 		point.SetPixel(0, 0, Color.black);
 		point.SetPixel(1, 0, Color.black);
@@ -37,13 +40,15 @@ public static class WorldMapGui {
 
 		buttonList = new ArrayList ();
 		foreach (Landmark lm in landmarkList){
-			LandmarkButton cb = new LandmarkButton (lm.GetName(), lm.GetPosition().x, lm.GetPosition().y);
+			LandmarkButton cb = new LandmarkButton (lm);
 			buttonList.Add (cb);
 		}
 		
 		RefreshTimer ();
 
-		buttonSize = 100;
+		buttonSize = 110;
+
+		curLandmark = null;
 	}
 	
 	public static void RefreshTimer (){
@@ -79,12 +84,12 @@ public static class WorldMapGui {
 			ArrayList landmarkList = ((Connection)conList[i]).GetLandmarkList();
 			Vector2 midpoint = new Vector2 (0,0);
 			for (int j = 0; j < landmarkList.Count; j++){
-				midpoint += (((Landmark)landmarkList[j]).GetPosition () + new Vector2(5,5)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2);
+				midpoint += (((Landmark)landmarkList[j]).GetPosition () + new Vector2(3,4)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2);
 			}
 			midpoint /= landmarkList.Count;
 
 			for (int j = 0; j < landmarkList.Count; j++){
-				DrawLine ((((Landmark)landmarkList[j]).GetPosition() + new Vector2(5,5)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2), midpoint, 10);
+				DrawLine ((((Landmark)landmarkList[j]).GetPosition() + new Vector2(3,4)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2), midpoint, 10);
 			}
 		}
 
@@ -98,9 +103,27 @@ public static class WorldMapGui {
 			else {
 				GUI.color = Color.white;
 			}
-			if (GUI.Button (new Rect ((((Button)buttonList[i]).GetPosition().x + 5) * buttonSize, (((Button)buttonList[i]).GetPosition().y + 5) * buttonSize, buttonSize, buttonSize), ((Button)buttonList[i]).GetName())) {
+			if (GUI.Button (new Rect ((((Button)buttonList[i]).GetPosition().x + 3) * buttonSize, (((Button)buttonList[i]).GetPosition().y + 4) * buttonSize, buttonSize, buttonSize), ((Button)buttonList[i]).GetName())) {
 				((Button)buttonList[i]).Action ();
 				selection = i;
+			}
+		}
+
+		if (curLandmark != null){
+			GUI.color = Color.white;
+			if (GUI.Button (new Rect (Screen.width - buttonSize * 2, Screen.height - buttonSize, buttonSize * 2, buttonSize), "Go to " + curLandmark.GetName())) {
+				SquadManager.curSquad.SetCurLoc(curLandmark);
+				curLandmark = null;
+			}
+		}
+		else {
+			GUI.color = Color.white;
+			Landmark lm = SquadManager.curSquad.GetCurLoc();
+			ArrayList lmMenuOptionList = lm.GetMenu().GetOptions();
+			for (int i = 0; i < lmMenuOptionList.Count; i++){
+				if (GUI.Button (new Rect (Screen.width - buttonSize * 2, Screen.height - buttonSize * (i + 1), buttonSize * 2, buttonSize), (string)lmMenuOptionList[i])) {
+					Debug.Log(lmMenuOptionList[i] + " Clicked");
+				}
 			}
 		}
 	}
