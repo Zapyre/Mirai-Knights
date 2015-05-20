@@ -2,9 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public class Ruins : Landmark {
-	public Ruins (string n, Vector2 pos, bool hostile, bool show){
+	public Ruins (string n, Vector2 pos, bool h, bool show){
 		name = n;
 		position = pos;
+		hostile = h;
 		if (hostile) {
 			menu = new HostileMenu ();
 		} else {

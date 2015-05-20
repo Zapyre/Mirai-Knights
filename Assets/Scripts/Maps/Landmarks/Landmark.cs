@@ -21,8 +21,8 @@ public abstract class Landmark {
 	public void SetLandmarkConnectionList (ArrayList lcl) { landmarkConnectionList = lcl; }
 	public Menu GetMenu () { return menu; }
 	public void SetMenu (Menu m) { menu = m; }
-	public bool isHostile () { return hostile; }
-	public void setHostile (bool h) { hostile = h; }
-	public bool isShown () { return shown; }
-	public void setShown (bool s) { shown = s; }
+	public bool IsHostile () { return hostile; }
+	public void SetHostile (bool h) { hostile = h; }
+	public bool IsShown () { return shown; }
+	public void SetShown (bool s) { shown = s; }
 }

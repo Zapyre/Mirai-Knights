@@ -20,4 +20,8 @@ public class LandmarkButton : Button{
 			WorldMapGui.curLandmark = null;
 		}
 	}
+
+	public bool IsHostile(){
+		return landmark.IsHostile();
+	}
 }

@@ -79,6 +79,7 @@ public static class WorldMapGui {
 			timerCount = currentTime + timeInc;
 		}
 
+		// Connections generation
 		for (int i = 0; i < conList.Count; i++) {
 			GUI.color = Color.white;
 			ArrayList landmarkList = ((Connection)conList[i]).GetLandmarkList();
@@ -93,12 +94,16 @@ public static class WorldMapGui {
 			}
 		}
 
+		// Map generation (Buttons)
 		for (int i = 0; i < buttonList.Count; i++) {
 			if (i == selection){
 				GUI.color = Color.yellow;
 			}
 			else if (SquadManager.curSquad.GetCurLoc().GetName() == ((Button)buttonList[i]).GetName()){
 				GUI.color = Color.green;
+			}
+			else if (((LandmarkButton)buttonList[i]).IsHostile()){
+				GUI.color = Color.red;
 			}
 			else {
 				GUI.color = Color.white;
@@ -109,6 +114,7 @@ public static class WorldMapGui {
 			}
 		}
 
+		// Side Menu generation (Buttons)
 		if (curLandmark != null){
 			GUI.color = Color.white;
 			if (GUI.Button (new Rect (Screen.width - buttonSize * 2, Screen.height - buttonSize, buttonSize * 2, buttonSize), "Go to " + curLandmark.GetName())) {
