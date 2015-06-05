@@ -4,7 +4,7 @@ using System.Collections;
 public class MainManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
-		MapManager.InitWorld ();
+		GameManager.InitWorld ();
 		GUIManager.InitGUI ();
 	}
 	

@@ -73,8 +73,8 @@
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
      <Compile Include="Assets\Scripts\Managers\GUIManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\MainManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\MapManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SquadManager.cs" />
      <Compile Include="Assets\Scripts\Maps\Connections\Connection.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Castle.cs" />

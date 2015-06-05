@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public static class MapManager {
+public static class GameManager {
 	public static Map curMap;
 	public static ArrayList mapList;
 	public static void InitWorld (){
@@ -9,5 +9,8 @@ public static class MapManager {
 		mapList = new ArrayList ();
 		mapList.Add (t);
 		curMap = t;
+	}
+
+	public static void MoveSquad (){
 	}
 }

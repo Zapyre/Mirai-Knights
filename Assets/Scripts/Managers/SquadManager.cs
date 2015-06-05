@@ -11,7 +11,7 @@ public static class SquadManager {
 		s.SetFunds (funds);
 		s.SetLeader (u);
 		s.AddUnit (u);
-		s.SetCurLoc ((Landmark)(MapManager.curMap.GetLandmarkList()[0]));
+		s.SetCurLoc ((Landmark)(GameManager.curMap.GetLandmarkList()[0]));
 		playerSquadList = new ArrayList ();
 		playerSquadList.Add (s);
 		Debug.Log (name + " Created");

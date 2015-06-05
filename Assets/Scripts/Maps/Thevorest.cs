@@ -7,7 +7,7 @@ public class Thevorest : Map {
 		landmarkList = new ArrayList ();
 
 		// Landmarks
-		Ruins ruinedTown = new Ruins ("Ruined Town", new Vector2 (-2,-1), true, true);
+		Ruins ruinedTown = new Ruins ("Ruined Town", new Vector2 (-2,-1), false, true);
 		Wildlands grasslands = new Wildlands ("The Grasslands", new Vector2 (0,0), true, true);
 		Wildlands wildlands = new Wildlands ("The Wildlands", new Vector2 (3,-3), true, true);
 		Wildlands forest = new Wildlands ("The Forest", new Vector2 (6,0), true, true);

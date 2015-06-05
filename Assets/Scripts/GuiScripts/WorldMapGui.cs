@@ -33,7 +33,7 @@ public static class WorldMapGui {
 		// Apply all SetPixel calls
 		point.Apply();
 
-		curMap = MapManager.curMap;
+		curMap = GameManager.curMap;
 		ArrayList landmarkList = curMap.GetLandmarkList ();
 		conList = curMap.GetConnectionList ();
 
