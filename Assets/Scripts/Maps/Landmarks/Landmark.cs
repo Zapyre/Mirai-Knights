@@ -5,7 +5,7 @@ public abstract class Landmark {
 	protected Texture landmarkPortrait;
 	protected string name;
 	protected Vector2 position;
-	protected ArrayList landmarkConnectionList;
+	protected ArrayList pathList;
 	protected Menu menu;
 	protected bool hostile;
 	protected bool shown;
@@ -17,8 +17,8 @@ public abstract class Landmark {
 	public void SetName(string n) { name = n; }
 	public Vector2 GetPosition () { return position; }
 	public void SetPostion (Vector2 p) { position = p; }
-	public ArrayList GetLandmarkConnectionList () { return landmarkConnectionList; }
-	public void SetLandmarkConnectionList (ArrayList lcl) { landmarkConnectionList = lcl; }
+	public ArrayList GetPathList () { return pathList; }
+	public void SetPathList (ArrayList pl) { pathList = pl; }
 	public Menu GetMenu () { return menu; }
 	public void SetMenu (Menu m) { menu = m; }
 	public bool IsHostile () { return hostile; }

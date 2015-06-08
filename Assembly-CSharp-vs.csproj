@@ -76,7 +76,6 @@
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\MainManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SquadManager.cs" />
-     <Compile Include="Assets\Scripts\Maps\Connections\Connection.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Castle.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Landmark.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\CastleMenu.cs" />
@@ -85,6 +84,7 @@
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\RuinsMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\TownMenu.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Menus\WildlandsMenu.cs" />
+     <Compile Include="Assets\Scripts\Maps\Landmarks\Path\Path.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Ruins.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Town.cs" />
      <Compile Include="Assets\Scripts\Maps\Landmarks\Wildlands.cs" />

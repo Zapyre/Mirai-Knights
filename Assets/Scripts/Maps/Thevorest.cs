@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Thevorest : Map {
 	public Thevorest () {
-		connectionList = new ArrayList ();
 		landmarkList = new ArrayList ();
 
 		// Landmarks
@@ -15,36 +14,51 @@ public class Thevorest : Map {
 		Castle fortThevorest = new Castle ("Fort Thevorest", new Vector2 (7, -2), false, false);
 
 		// Connections
-		ArrayList tempLandmarkList = new ArrayList ();
-		tempLandmarkList.Add (ruinedTown);
-		tempLandmarkList.Add(grasslands);
-		Connection con = new Connection (tempLandmarkList, "Path to the meadows", 1f);
-		connectionList.Add (con);
+		ArrayList pl = new ArrayList ();
+		Path p1 = new Path (grasslands, "Ruined Path", 1f);
+		pl.Add (p1);
+		ruinedTown.SetPathList (pl);
 
-		tempLandmarkList = new ArrayList ();
-		tempLandmarkList.Add(grasslands);
-		tempLandmarkList.Add(wildlands);
-		tempLandmarkList.Add(forest);
-		con = new Connection (tempLandmarkList, "Forked path", 3f);
-		connectionList.Add (con);
+		pl = new ArrayList ();
+		Path p2 = new Path (ruinedTown, "Ruined Path", 1f);
+		Path p3 = new Path (wildlands, "Path to the Wilds", 1f);
+		Path p4 = new Path (forest, "Bushy Path", 1f);
+		pl.Add (p2);
+		pl.Add (p3);
+		pl.Add (p4);
+		grasslands.SetPathList (pl);
 
-		tempLandmarkList = new ArrayList ();
-		tempLandmarkList.Add(forest);
-		tempLandmarkList.Add(hiddenCamp);
-		con = new Connection (tempLandmarkList, "Shadowy thicket trail", 2f);
-		connectionList.Add (con);
+		pl = new ArrayList ();
+		p2 = new Path (grasslands, "Path to the Wilds", 1f);
+		p3 = new Path (fortThevorest, "Stony Path", 1f);
+		p4 = new Path (forest, "Wooded Path", 1f);
+		pl.Add (p2);
+		pl.Add (p3);
+		pl.Add (p4);
+		wildlands.SetPathList (pl);
 
-		tempLandmarkList = new ArrayList ();
-		tempLandmarkList.Add(hiddenCamp);
-		tempLandmarkList.Add(fortThevorest);
-		con = new Connection (tempLandmarkList, "Secret path to the castle", 1.5f);
-		connectionList.Add (con);
+		pl = new ArrayList ();
+		p2 = new Path (grasslands, "Bushy Path", 1f);
+		p3 = new Path (hiddenCamp, "Hidden Path", 1f);
+		p4 = new Path (wildlands, "Wooded Path", 1f);
+		pl.Add (p2);
+		pl.Add (p3);
+		pl.Add (p4);
+		forest.SetPathList (pl);
 
-		tempLandmarkList = new ArrayList ();
-		tempLandmarkList.Add(wildlands);
-		tempLandmarkList.Add(fortThevorest);
-		con = new Connection (tempLandmarkList, "Bricked path", 2.5f);
-		connectionList.Add (con);
+		pl = new ArrayList ();
+		p2 = new Path (fortThevorest, "Back Alley", 1f);
+		p3 = new Path (forest, "Hidden Path", 1f);
+		pl.Add (p2);
+		pl.Add (p3);
+		hiddenCamp.SetPathList (pl);
+
+		pl = new ArrayList ();
+		p2 = new Path (hiddenCamp, "Back Alley", 1f);
+		p3 = new Path (wildlands, "Stony Path", 1f);
+		pl.Add (p2);
+		pl.Add (p3);
+		fortThevorest.SetPathList (pl);
 
 		// Landmark Listing
 		landmarkList.Add(ruinedTown);

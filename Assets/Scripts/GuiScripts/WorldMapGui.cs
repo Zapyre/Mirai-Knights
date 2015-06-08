@@ -3,7 +3,6 @@ using System.Collections;
 
 public static class WorldMapGui {
 	private static ArrayList buttonList;
-	private static ArrayList conList;
 	private static int selection;
 	private static float currentTime;
 	private static float timerCount;
@@ -35,7 +34,6 @@ public static class WorldMapGui {
 
 		curMap = GameManager.curMap;
 		ArrayList landmarkList = curMap.GetLandmarkList ();
-		conList = curMap.GetConnectionList ();
 
 
 		buttonList = new ArrayList ();
@@ -80,7 +78,7 @@ public static class WorldMapGui {
 		}
 
 		// Connections generation
-		for (int i = 0; i < conList.Count; i++) {
+		/*for (int i = 0; i < conList.Count; i++) {
 			GUI.color = Color.white;
 			ArrayList landmarkList = ((Connection)conList[i]).GetLandmarkList();
 			Vector2 midpoint = new Vector2 (0,0);
@@ -92,7 +90,7 @@ public static class WorldMapGui {
 			for (int j = 0; j < landmarkList.Count; j++){
 				DrawLine ((((Landmark)landmarkList[j]).GetPosition() + new Vector2(3,4)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2), midpoint, 10);
 			}
-		}
+		}*/
 
 		// Map generation (Buttons)
 		for (int i = 0; i < buttonList.Count; i++) {
@@ -118,7 +116,7 @@ public static class WorldMapGui {
 		if (curLandmark != null){
 			GUI.color = Color.white;
 			if (GUI.Button (new Rect (Screen.width - buttonSize * 2, Screen.height - buttonSize, buttonSize * 2, buttonSize), "Go to " + curLandmark.GetName())) {
-				SquadManager.curSquad.SetCurLoc(curLandmark);
+				SquadManager.MoveSquad(curLandmark);
 				curLandmark = null;
 			}
 		}

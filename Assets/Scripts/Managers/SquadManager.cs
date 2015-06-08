@@ -18,4 +18,8 @@ public static class SquadManager {
 
 		curSquad = s;
 	}
+
+	public static void MoveSquad (Landmark lm){
+		curSquad.SetCurLoc (lm);
+	}
 }
