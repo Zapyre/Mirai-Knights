@@ -33,9 +33,7 @@ public static class WorldMapGui {
 		point.Apply();
 
 		curMap = GameManager.curMap;
-		ArrayList landmarkList = curMap.GetLandmarkList ();
-
-
+		ArrayList landmarkList = curMap.GetVisibleLandmarkList ();
 		buttonList = new ArrayList ();
 		foreach (Landmark lm in landmarkList){
 			LandmarkButton cb = new LandmarkButton (lm);
@@ -91,6 +89,16 @@ public static class WorldMapGui {
 				DrawLine ((((Landmark)landmarkList[j]).GetPosition() + new Vector2(3,4)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2), midpoint, 10);
 			}
 		}*/
+		curMap = GameManager.curMap;
+		ArrayList landmarkList = curMap.GetVisibleLandmarkList ();
+		foreach (Landmark lm in landmarkList){
+			ArrayList pathList = lm.GetPathList();
+			foreach (Path p in pathList){
+				if (p.GetLandmark ().IsShown()){
+					DrawLine ((lm.GetPosition() + new Vector2(3.5f,4.5f)) * buttonSize, (p.GetLandmark().GetPosition() + new Vector2(3.5f,4.5f)) * buttonSize, 10);
+				}
+			}
+		}
 
 		// Map generation (Buttons)
 		for (int i = 0; i < buttonList.Count; i++) {
@@ -126,9 +134,30 @@ public static class WorldMapGui {
 			ArrayList lmMenuOptionList = lm.GetMenu().GetOptions();
 			for (int i = 0; i < lmMenuOptionList.Count; i++){
 				if (GUI.Button (new Rect (Screen.width - buttonSize * 2, Screen.height - buttonSize * (i + 1), buttonSize * 2, buttonSize), (string)lmMenuOptionList[i])) {
-					Debug.Log(lmMenuOptionList[i] + " Clicked");
+					lm.GetMenu().Action((string)lmMenuOptionList[i]);
 				}
 			}
+		}
+	}
+
+	public static void UpdateButtonList(){
+		curMap = GameManager.curMap;
+		ArrayList landmarkList = curMap.GetVisibleLandmarkList ();
+		buttonList = new ArrayList ();
+		int i = -1;
+		int j = 0;
+		if (SquadManager.curSquad != null){
+			foreach (Landmark lm in landmarkList){
+				LandmarkButton cb = new LandmarkButton (lm);
+				buttonList.Add (cb);
+				if (lm.GetName() == SquadManager.curSquad.GetCurLoc().GetName()){
+					i = j;
+				}
+				j++;
+			}
+		}
+		if (i != -1) {
+			SquadManager.curSquad.SetCurLoc ((Landmark)landmarkList[i]);
 		}
 	}
 

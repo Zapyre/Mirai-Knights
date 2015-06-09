@@ -10,4 +10,8 @@ public static class GameManager {
 		mapList.Add (t);
 		curMap = t;
 	}
+
+	public static void Update (){
+		curMap.HiddenTriggers ();
+	}
 }

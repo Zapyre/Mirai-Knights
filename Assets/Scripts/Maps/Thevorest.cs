@@ -10,8 +10,8 @@ public class Thevorest : Map {
 		Wildlands grasslands = new Wildlands ("The Grasslands", new Vector2 (0,0), true, true);
 		Wildlands wildlands = new Wildlands ("The Wildlands", new Vector2 (3,-3), true, true);
 		Wildlands forest = new Wildlands ("The Forest", new Vector2 (6,0), true, true);
-		Town hiddenCamp = new Town ("The Hidden Camp", new Vector2 (7, 1), false, true);
-		Castle fortThevorest = new Castle ("Fort Thevorest", new Vector2 (7, -2), false, false);
+		Town hiddenCamp = new Town ("The Hidden Camp", new Vector2 (7, 1), false, false);
+		Castle fortThevorest = new Castle ("Fort Thevorest", new Vector2 (7, -2), false, true);
 
 		// Connections
 		ArrayList pl = new ArrayList ();
@@ -67,6 +67,13 @@ public class Thevorest : Map {
 		landmarkList.Add(forest);
 		landmarkList.Add(hiddenCamp);
 		landmarkList.Add(fortThevorest);
+	}
+
+	public override void HiddenTriggers(){
+		if (!((Landmark)landmarkList[3]).IsHostile()) { // Forest
+			((Landmark)landmarkList[4]).SetShown(true); // Hidden camp
+		}
+		WorldMapGui.UpdateButtonList();
 	}
 }
 

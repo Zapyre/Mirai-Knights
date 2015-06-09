@@ -1,14 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Maps\Thevorest.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Maps\Landmarks\Landmark.cs">
     <Files>
-      <File FileName="Assets\Scripts\GuiScripts\WorldMapGui.cs" Line="93" Column="6" />
-      <File FileName="Assets\Scripts\Managers\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\SquadManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Maps\Map.cs" Line="12" Column="13" />
-      <File FileName="Assets\Scripts\Maps\Thevorest.cs" Line="20" Column="29" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Landmark.cs" Line="20" Column="54" />
+      <File FileName="Assets\Scripts\Maps\Map.cs" Line="22" Column="13" />
+      <File FileName="Assets\Scripts\GuiScripts\WorldMapGui.cs" Line="156" Column="9" />
+      <File FileName="Assets\Scripts\Managers\GameManager.cs" Line="15" Column="28" />
+      <File FileName="Assets\Scripts\Maps\Thevorest.cs" Line="49" Column="25" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Landmark.cs" Line="9" Column="12" />
       <File FileName="Assets\Scripts\Maps\Landmarks\Path\Path.cs" Line="20" Column="2" />
+      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\MainManager.cs" Line="13" Column="25" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\HostileMenu.cs" Line="24" Column="36" />
+      <File FileName="Assets\Scripts\Managers\SquadManager.cs" Line="22" Column="15" />
+      <File FileName="Assets\Scripts\Maps\Landmarks\Menus\Menu.cs" Line="12" Column="3" />
+      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GuiScripts\ShopGui.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

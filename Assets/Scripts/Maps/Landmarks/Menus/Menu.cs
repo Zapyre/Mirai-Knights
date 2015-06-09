@@ -7,4 +7,7 @@ public abstract class Menu {
 
 	public string GetName () { return name; }
 	public ArrayList GetOptions () { return optionList; }
+	public virtual void Action (string option) {
+		Debug.Log(option + " Clicked");
+	}
 }
