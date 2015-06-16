@@ -16,7 +16,7 @@ public class LandmarkButton : Button{
 	public override void Action (){
 		Debug.Log ("Landmark " + name + " Clicked!");
 		WorldMapGui.curLandmark = landmark;
-		if (SquadManager.curSquad.GetCurLoc ().GetName () == landmark.GetName()) {
+		if (DataManager.curSquad.GetCurLoc ().GetName () == landmark.GetName()) {
 			WorldMapGui.curLandmark = null;
 		}
 	}

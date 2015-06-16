@@ -6,6 +6,7 @@ public class MainManager : MonoBehaviour {
 	void Start () {
 		GameManager.InitWorld ();
 		GUIManager.InitGUI ();
+		SquadManager.InitSquadManager ();
 	}
 	
 	// Update is called once per frame

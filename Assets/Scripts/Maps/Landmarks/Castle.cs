@@ -6,12 +6,8 @@ public class Castle : Landmark {
 		name = n;
 		position = pos;
 		hostile = h;
-		if (hostile) {
-			menu = new HostileMenu ();
-		} else {
-			menu = new CastleMenu ();
-		}
 		shown = show;
+		AutoMenu ();
 	}
 }
 

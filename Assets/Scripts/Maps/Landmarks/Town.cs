@@ -6,11 +6,7 @@ public class Town : Landmark {
 		name = n;
 		position = pos;
 		hostile = h;
-		if (hostile) {
-			menu = new HostileMenu ();
-		} else {
-			menu = new TownMenu ();
-		}
 		shown = show;
+		AutoMenu ();
 	}
 }

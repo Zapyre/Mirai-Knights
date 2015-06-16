@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public static class SquadManager {
-	public static Squad curSquad;
-	public static ArrayList playerSquadList;
+	public static void InitSquadManager(){
+		DataManager.playerSquadList = new ArrayList ();
+	}
+
 	public static void CreateNewSquad (Unit u, string name, int exp, int funds){
 		Squad s = new Squad ();
 		s.SetName (name);
@@ -11,15 +13,12 @@ public static class SquadManager {
 		s.SetFunds (funds);
 		s.SetLeader (u);
 		s.AddUnit (u);
-		s.SetCurLoc ((Landmark)(GameManager.curMap.GetLandmarkList()[0]));
-		playerSquadList = new ArrayList ();
-		playerSquadList.Add (s);
-		Debug.Log (name + " Created");
-
-		curSquad = s;
+		s.SetCurLoc ((Landmark)(DataManager.curMap.GetLandmarkList()[0]));
+		DataManager.curSquad = s;
+		DataManager.playerSquadList.Add (s);
 	}
 
 	public static void MoveSquad (Landmark lm){
-		curSquad.SetCurLoc (lm);
+		DataManager.curSquad.SetCurLoc (lm);
 	}
 }

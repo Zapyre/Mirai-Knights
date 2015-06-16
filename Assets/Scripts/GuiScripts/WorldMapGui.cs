@@ -32,7 +32,7 @@ public static class WorldMapGui {
 		// Apply all SetPixel calls
 		point.Apply();
 
-		curMap = GameManager.curMap;
+		curMap = DataManager.curMap;
 		ArrayList landmarkList = curMap.GetVisibleLandmarkList ();
 		buttonList = new ArrayList ();
 		foreach (Landmark lm in landmarkList){
@@ -89,7 +89,7 @@ public static class WorldMapGui {
 				DrawLine ((((Landmark)landmarkList[j]).GetPosition() + new Vector2(3,4)) * buttonSize + new Vector2(buttonSize/2,buttonSize/2), midpoint, 10);
 			}
 		}*/
-		curMap = GameManager.curMap;
+		curMap = DataManager.curMap;
 		ArrayList landmarkList = curMap.GetVisibleLandmarkList ();
 		foreach (Landmark lm in landmarkList){
 			ArrayList pathList = lm.GetPathList();
@@ -105,7 +105,7 @@ public static class WorldMapGui {
 			if (i == selection){
 				GUI.color = Color.yellow;
 			}
-			else if (SquadManager.curSquad.GetCurLoc().GetName() == ((Button)buttonList[i]).GetName()){
+			else if (DataManager.curSquad.GetCurLoc().GetName() == ((Button)buttonList[i]).GetName()){
 				GUI.color = Color.green;
 			}
 			else if (((LandmarkButton)buttonList[i]).IsHostile()){
@@ -130,7 +130,7 @@ public static class WorldMapGui {
 		}
 		else {
 			GUI.color = Color.white;
-			Landmark lm = SquadManager.curSquad.GetCurLoc();
+			Landmark lm = DataManager.curSquad.GetCurLoc();
 			ArrayList lmMenuOptionList = lm.GetMenu().GetOptions();
 			for (int i = 0; i < lmMenuOptionList.Count; i++){
 				if (GUI.Button (new Rect (Screen.width - buttonSize * 2, Screen.height - buttonSize * (i + 1), buttonSize * 2, buttonSize), (string)lmMenuOptionList[i])) {
@@ -141,23 +141,23 @@ public static class WorldMapGui {
 	}
 
 	public static void UpdateButtonList(){
-		curMap = GameManager.curMap;
+		curMap = DataManager.curMap;
 		ArrayList landmarkList = curMap.GetVisibleLandmarkList ();
 		buttonList = new ArrayList ();
 		int i = -1;
 		int j = 0;
-		if (SquadManager.curSquad != null){
+		if (DataManager.curSquad != null){
 			foreach (Landmark lm in landmarkList){
 				LandmarkButton cb = new LandmarkButton (lm);
 				buttonList.Add (cb);
-				if (lm.GetName() == SquadManager.curSquad.GetCurLoc().GetName()){
+				if (lm.GetName() == DataManager.curSquad.GetCurLoc().GetName()){
 					i = j;
 				}
 				j++;
 			}
 		}
 		if (i != -1) {
-			SquadManager.curSquad.SetCurLoc ((Landmark)landmarkList[i]);
+			DataManager.curSquad.SetCurLoc ((Landmark)landmarkList[i]);
 		}
 	}
 

@@ -13,14 +13,15 @@ public class HostileMenu : Menu{
 		if (option == "Liberate the area") {
 			int i = -1;
 			int j = 0;
-			foreach (Landmark lm in GameManager.curMap.GetLandmarkList()){
-				if (lm.GetName () == SquadManager.curSquad.GetCurLoc().GetName ()){
+			foreach (Landmark lm in DataManager.curMap.GetLandmarkList()){
+				if (lm.GetName () == DataManager.curSquad.GetCurLoc().GetName ()){
 					i = j;
 				}
 				j++;
 			}
 			if (i != -1){
-				((Landmark)(GameManager.curMap.GetLandmarkList()[i])).SetHostile(false);
+				((Landmark)(DataManager.curMap.GetLandmarkList()[i])).SetHostile(false);
+				((Landmark)(DataManager.curMap.GetLandmarkList()[i])).AutoMenu();
 				WorldMapGui.UpdateButtonList();
 			}
 		}

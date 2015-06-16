@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenCane.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenShield.cs" />
      <Compile Include="Assets\Scripts\Items\Weapons\WoodenSword.cs" />
+     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GUIManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\MainManager.cs" />

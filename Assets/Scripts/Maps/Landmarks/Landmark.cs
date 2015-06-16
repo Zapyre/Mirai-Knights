@@ -10,6 +10,15 @@ public abstract class Landmark {
 	protected bool hostile;
 	protected bool shown;
 
+	// AutoMenu 
+	public void AutoMenu (){
+		if (hostile) {
+			menu = new HostileMenu ();
+		} else {
+			menu = new CastleMenu ();
+		}
+	}
+
 	// Getters and Setters
 	public Texture GetLandmarkPortrait () { return landmarkPortrait; }
 	public void SetLandmarkPortrait (Texture lp) { landmarkPortrait = lp; }
