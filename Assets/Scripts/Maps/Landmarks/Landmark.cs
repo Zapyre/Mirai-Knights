@@ -1,7 +1,8 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
-public abstract class Landmark {
+public abstract class Landmark:IComparable {
 	protected Texture landmarkPortrait;
 	protected string name;
 	protected Vector2 position;
@@ -11,7 +12,7 @@ public abstract class Landmark {
 	protected bool shown;
 
 	// AutoMenu 
-	public void AutoMenu (){
+	public virtual void AutoMenu (){
 		if (hostile) {
 			menu = new HostileMenu ();
 		} else {
@@ -34,4 +35,17 @@ public abstract class Landmark {
 	public void SetHostile (bool h) { hostile = h; }
 	public bool IsShown () { return shown; }
 	public void SetShown (bool s) { shown = s; }
+
+	public int CompareTo(object obj){
+		if (obj is Landmark) {
+			Landmark compLm = (Landmark) obj;
+			if (name.Equals(compLm.GetName())){
+				return 0;
+			}
+			else {
+				return name.CompareTo(compLm.GetName());
+			}
+		}
+		return 1;
+	}
 }

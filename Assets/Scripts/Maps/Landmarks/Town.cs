@@ -9,4 +9,13 @@ public class Town : Landmark {
 		shown = show;
 		AutoMenu ();
 	}
+
+	// AutoMenu 
+	public override void AutoMenu (){
+		if (hostile) {
+			menu = new HostileMenu ();
+		} else {
+			menu = new TownMenu ();
+		}
+	}
 }
