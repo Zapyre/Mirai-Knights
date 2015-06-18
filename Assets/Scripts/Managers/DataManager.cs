@@ -7,6 +7,7 @@ public static class DataManager {
 	public static Map curMap;
 
 	// Squads
+	public static ArrayList hostileSquadList;
 	public static ArrayList playerSquadList;
 	public static Squad curSquad;
 }

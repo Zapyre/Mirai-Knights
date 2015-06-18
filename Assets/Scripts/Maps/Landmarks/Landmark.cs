@@ -9,6 +9,8 @@ public abstract class Landmark:IComparable {
 	protected ArrayList pathList;
 	protected Menu menu;
 	protected bool hostile;
+	protected int hostileRating;
+	protected Vector2 difficulty;
 	protected bool shown;
 
 	// AutoMenu 
@@ -33,6 +35,9 @@ public abstract class Landmark:IComparable {
 	public void SetMenu (Menu m) { menu = m; }
 	public bool IsHostile () { return hostile; }
 	public void SetHostile (bool h) { hostile = h; }
+	public int GetHostileRating () { return hostileRating; }
+	public void SetHostileRating (int hr) { hostileRating = hr; }
+	public Vector2 GetDifficulty () { return difficulty; }
 	public bool IsShown () { return shown; }
 	public void SetShown (bool s) { shown = s; }
 

@@ -7,9 +7,9 @@ public class Thevorest : Map {
 
 		// Landmarks
 		Ruins ruinedTown = new Ruins ("Ruined Town", new Vector2 (-2,-1), false, true);
-		Wildlands grasslands = new Wildlands ("The Grasslands", new Vector2 (0,0), true, true);
+		Wildlands grasslands = new Wildlands ("The Grasslands", new Vector2 (0,0), true, true, 4);
 		Wildlands wildlands = new Wildlands ("The Wildlands", new Vector2 (3,-3), true, true);
-		Wildlands forest = new Wildlands ("The Forest", new Vector2 (6,0), true, true);
+		Wildlands forest = new Wildlands ("The Forest", new Vector2 (6,0), true, true, 4);
 		Town hiddenCamp = new Town ("The Hidden Camp", new Vector2 (7, 1), false, false);
 		Castle fortThevorest = new Castle ("Fort Thevorest", new Vector2 (7, -2), false, true);
 

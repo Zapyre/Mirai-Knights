@@ -36,7 +36,7 @@ public static class SquadManager {
 		bool blocked = false;
 		foreach (Landmark sololm in quickestPath){
 			if (sololm.IsHostile()){
-				int rdmNum = Random.Range (0,4);
+				int rdmNum = Random.Range (0,sololm.GetHostileRating());
 				if (rdmNum == 0){
 					DataManager.curSquad.SetCurLoc (sololm);
 					Debug.Log ("You have been blocked at " + sololm.GetName());

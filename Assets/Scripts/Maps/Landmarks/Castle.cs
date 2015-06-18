@@ -8,6 +8,16 @@ public class Castle : Landmark {
 		hostile = h;
 		shown = show;
 		AutoMenu ();
+		hostileRating = 1;
+	}
+
+	public Castle (string n, Vector2 pos, bool h, bool show, int hr){
+		name = n;
+		position = pos;
+		hostile = h;
+		shown = show;
+		AutoMenu ();
+		hostileRating = hr;
 	}
 
 	// AutoMenu 
