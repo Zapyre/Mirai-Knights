@@ -49,6 +49,9 @@ public static class SquadManager {
 			Debug.Log ("You have arrived at " + lm.GetName());
 			DataManager.curSquad.SetCurLoc (lm);
 		}
+		else { // Engage in battle
+			Debug.Log (DataManager.curSquad.GetSquadStr() + " vs " + (DataManager.curSquad.GetCurLoc().GetHostileSquad().GetSquadStr() + Random.Range(-1,2)));
+		}
 	}
 
 	private static void FindQuickestPath (Landmark start, Landmark end, ArrayList path, float time){

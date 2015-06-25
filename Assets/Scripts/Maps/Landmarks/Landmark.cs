@@ -10,6 +10,7 @@ public abstract class Landmark:IComparable {
 	protected Menu menu;
 	protected bool hostile;
 	protected int hostileRating;
+	protected Squad hostileSquad;
 	protected Vector2 difficulty;
 	protected bool shown;
 
@@ -37,6 +38,8 @@ public abstract class Landmark:IComparable {
 	public void SetHostile (bool h) { hostile = h; }
 	public int GetHostileRating () { return hostileRating; }
 	public void SetHostileRating (int hr) { hostileRating = hr; }
+	public Squad GetHostileSquad () { return hostileSquad; }
+	public void SetHostileSquad (Squad s) { hostileSquad = s; }
 	public Vector2 GetDifficulty () { return difficulty; }
 	public bool IsShown () { return shown; }
 	public void SetShown (bool s) { shown = s; }

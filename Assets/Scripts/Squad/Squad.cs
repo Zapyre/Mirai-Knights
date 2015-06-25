@@ -30,4 +30,13 @@ public class Squad {
 	public void SetSquadItemList (ArrayList i) { squadItemList = i; }
 	public Landmark GetCurLoc () { return curLoc; }
 	public void SetCurLoc (Landmark cl) { curLoc = cl; }
+
+	// Temp statistics
+	public int GetSquadStr (){
+		int str = 0;
+		foreach (Unit u in unitList) {
+			str += u.GetStrength();
+		}
+		return str;
+	}
 }

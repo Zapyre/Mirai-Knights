@@ -27,6 +27,10 @@ public class Thevorest : Map {
 		pl.Add (p3);
 		pl.Add (p4);
 		grasslands.SetPathList (pl);
+		Squad s = new Squad ();
+		Elf e = new Elf ("Enemy Elf", null);
+		s.AddUnit (e);
+		grasslands.SetHostileSquad(s);
 
 		pl = new ArrayList ();
 		p2 = new Path (grasslands, "Path to the Wilds", 1f);
@@ -36,6 +40,10 @@ public class Thevorest : Map {
 		pl.Add (p3);
 		pl.Add (p4);
 		wildlands.SetPathList (pl);
+		s = new Squad ();
+		e = new Elf ("Enemy Elf", null);
+		s.AddUnit (e);
+		wildlands.SetHostileSquad(s);
 
 		pl = new ArrayList ();
 		p2 = new Path (grasslands, "Bushy Path", 1f);
@@ -45,6 +53,10 @@ public class Thevorest : Map {
 		pl.Add (p3);
 		pl.Add (p4);
 		forest.SetPathList (pl);
+		s = new Squad ();
+		e = new Elf ("Enemy Elf", null);
+		s.AddUnit (e);
+		forest.SetHostileSquad(s);
 
 		pl = new ArrayList ();
 		p2 = new Path (fortThevorest, "Back Alley", 1f);
