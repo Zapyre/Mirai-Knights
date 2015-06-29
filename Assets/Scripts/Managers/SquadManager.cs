@@ -39,7 +39,8 @@ public static class SquadManager {
 				int rdmNum = Random.Range (0,sololm.GetHostileRating());
 				if (rdmNum == 0){
 					DataManager.curSquad.SetCurLoc (sololm);
-					Debug.Log ("You have been blocked at " + sololm.GetName());
+					DataManager.enemySquad = sololm.GetHostileSquad();
+					Debug.Log ("You have been blocked at " + sololm.GetName() + " by " + DataManager.enemySquad);
 					blocked = true;
 					break;
 				}
@@ -50,7 +51,12 @@ public static class SquadManager {
 			DataManager.curSquad.SetCurLoc (lm);
 		}
 		else { // Engage in battle
-			Debug.Log (DataManager.curSquad.GetSquadStr() + " vs " + (DataManager.curSquad.GetCurLoc().GetHostileSquad().GetSquadStr() + Random.Range(-1,2)));
+			if (GameManager.BattleEngine()){
+				Debug.Log ("Your squad has defeated the " + DataManager.enemySquad.GetName());
+			}
+			else {
+				Debug.Log ("Your squad has been defeated by " + DataManager.enemySquad.GetName());
+			}
 		}
 	}
 

@@ -15,6 +15,12 @@ public class Squad {
 		squadItemList = new ArrayList ();
 	}
 
+	public Squad (string n){
+		unitList = new ArrayList ();
+		squadItemList = new ArrayList ();
+		name = n;
+	}
+
 	// Getters
 	public Unit GetLeader (){ return leader; }
 	public void SetLeader (Unit l){ leader = l; }

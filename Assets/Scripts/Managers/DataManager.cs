@@ -9,5 +9,8 @@ public static class DataManager {
 	// Squads
 	public static ArrayList hostileSquadList;
 	public static ArrayList playerSquadList;
+
+	// Current Variables
 	public static Squad curSquad;
+	public static Squad enemySquad;
 }
