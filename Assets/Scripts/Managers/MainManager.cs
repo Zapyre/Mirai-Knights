@@ -4,9 +4,7 @@ using System.Collections;
 public class MainManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
-		GameManager.InitWorld ();
-		GUIManager.InitGUI ();
-		SquadManager.InitSquadManager ();
+		InitAllManagers ();
 	}
 	
 	// Update is called once per frame
@@ -16,5 +14,11 @@ public class MainManager : MonoBehaviour {
 
 	void OnGUI () {
 		GUIManager.DrawGUI ();
+	}
+
+	public static void InitAllManagers(){
+		GameManager.InitWorld ();
+		GUIManager.InitGUI ();
+		SquadManager.InitSquadManager ();
 	}
 }

@@ -56,6 +56,7 @@ public static class SquadManager {
 			}
 			else {
 				Debug.Log ("Your squad has been defeated by " + DataManager.enemySquad.GetName());
+				GUIManager.curMode = GUIManager.Mode.GameOver;
 			}
 		}
 	}

@@ -20,7 +20,7 @@ public static class GameManager {
 		int squadStr = DataManager.curSquad.GetSquadStr ();
 		int enemySquadStr = DataManager.curSquad.GetCurLoc ().GetHostileSquad ().GetSquadStr () + fudFactor;
 		Debug.Log (squadStr + " vs " + enemySquadStr);
-		if (squadStr > enemySquadStr) {
+		if (squadStr >= enemySquadStr) {
 			victory = true;
 		}
 		return victory;

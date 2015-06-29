@@ -1,14 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\SquadManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GuiScripts\GameOverGui.cs">
     <Files>
-      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\SquadManager.cs" Line="71" Column="2" />
-      <File FileName="Assets\Scripts\Maps\Landmarks\Landmark.cs" Line="30" Column="45" />
-      <File FileName="Assets\Scripts\Maps\Thevorest.cs" Line="46" Column="25" />
-      <File FileName="Assets\Scripts\Managers\GameManager.cs" Line="19" Column="40" />
-      <File FileName="Assets\Scripts\Managers\DataManager.cs" Line="15" Column="29" />
-      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="8" Column="27" />
+      <File FileName="Assets\Scripts\Managers\DataManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\GameManager.cs" Line="28" Column="2" />
+      <File FileName="Assets\Scripts\GuiScripts\GameOverGui.cs" Line="15" Column="26" />
+      <File FileName="Assets\Scripts\GuiScripts\ShopGui.cs" Line="18" Column="50" />
+      <File FileName="Assets\Scripts\GuiScripts\MainMenuGui.cs" Line="28" Column="38" />
+      <File FileName="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" Line="39" Column="4" />
+      <File FileName="Assets\Scripts\Managers\MainManager.cs" Line="19" Column="15" />
+      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="15" Column="28" />
+      <File FileName="Assets\Scripts\Managers\SquadManager.cs" Line="59" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
