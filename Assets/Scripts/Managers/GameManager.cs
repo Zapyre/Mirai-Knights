@@ -22,6 +22,8 @@ public static class GameManager {
 		Debug.Log (squadStr + " vs " + enemySquadStr);
 		if (squadStr >= enemySquadStr) {
 			victory = true;
+			DataManager.curSquad.AddExperience(DataManager.curSquad.GetCurLoc ().GetHostileSquad ().GetExperience());
+			DataManager.curSquad.AddFunds(DataManager.curSquad.GetCurLoc ().GetHostileSquad().GetFunds());
 		}
 		return victory;
 	}

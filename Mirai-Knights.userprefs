@@ -1,16 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GuiScripts\GameOverGui.cs">
     <Files>
-      <File FileName="Assets\Scripts\Managers\DataManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\GameManager.cs" Line="28" Column="2" />
-      <File FileName="Assets\Scripts\GuiScripts\GameOverGui.cs" Line="15" Column="26" />
-      <File FileName="Assets\Scripts\GuiScripts\ShopGui.cs" Line="18" Column="50" />
-      <File FileName="Assets\Scripts\GuiScripts\MainMenuGui.cs" Line="28" Column="38" />
-      <File FileName="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" Line="39" Column="4" />
-      <File FileName="Assets\Scripts\Managers\MainManager.cs" Line="19" Column="15" />
-      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="15" Column="28" />
-      <File FileName="Assets\Scripts\Managers\SquadManager.cs" Line="59" Column="51" />
+      <File FileName="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" Line="55" Column="54" />
+      <File FileName="Assets\Scripts\GuiScripts\GameOverGui.cs" Line="14" Column="47" />
+      <File FileName="Assets\Scripts\GuiScripts\MainMenuGui.cs" Line="25" Column="17" />
+      <File FileName="Assets\Scripts\Managers\GUIManager.cs" Line="17" Column="33" />
+      <File FileName="Assets\Scripts\GuiScripts\WorldMapGui.cs" Line="156" Column="49" />
+      <File FileName="Assets\Scripts\Buttons\LandmarkButton.cs" Line="10" Column="38" />
+      <File FileName="Assets\Scripts\GuiScripts\SquadStatusGui.cs" Line="8" Column="74" />
+      <File FileName="Assets\Scripts\Managers\GameManager.cs" Line="25" Column="20" />
+      <File FileName="Assets\Scripts\Maps\Thevorest.cs" Line="56" Column="40" />
+      <File FileName="Assets\Scripts\Squad\Squad.cs" Line="35" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

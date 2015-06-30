@@ -120,7 +120,7 @@ public static class WorldMapGui {
 			}
 		}
 
-		// Side Menu generation (Buttons)
+		// Bottom Right Side Menu generation (Buttons)
 		if (curLandmark != null){
 			GUI.color = Color.white;
 			if (GUI.Button (new Rect (Screen.width - buttonSize * 2, Screen.height - buttonSize, buttonSize * 2, buttonSize), "Go to " + curLandmark.GetName())) {
@@ -137,6 +137,11 @@ public static class WorldMapGui {
 					lm.GetMenu().Action((string)lmMenuOptionList[i]);
 				}
 			}
+		}
+
+		// Left Side Menu generation
+		if (GUI.Button (new Rect (0,0, buttonSize*2, buttonSize), "See Squad Stats")){
+			GUIManager.curMode = GUIManager.Mode.SquadStatus;
 		}
 	}
 
