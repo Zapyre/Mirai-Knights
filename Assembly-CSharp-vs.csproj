@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\GuiScripts\MainMenuGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\ShopGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\SquadStatusGui.cs" />
+     <Compile Include="Assets\Scripts\GuiScripts\UnitStatusGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\WorldMapGui.cs" />
      <Compile Include="Assets\Scripts\Items\Armors\Armor.cs" />
      <Compile Include="Assets\Scripts\Items\Armors\BentGreaves.cs" />

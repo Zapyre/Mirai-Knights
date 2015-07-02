@@ -11,6 +11,7 @@ public static class DataManager {
 	public static ArrayList playerSquadList;
 
 	// Current Variables
+	public static Unit curUnit;
 	public static Squad curSquad;
 	public static Squad enemySquad;
 }

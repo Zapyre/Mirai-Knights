@@ -11,7 +11,7 @@ public static class GUIManager {
 	private static float timerCount;
 	private static float timeInc;
 
-	public enum Mode {Main, Create, Option, World, SquadStatus, GameOver};
+	public enum Mode {Main, Create, Option, World, SquadStatus, UnitStatus, GameOver};
 	public static Mode curMode;
 
 	public static void InitGUI () {
@@ -37,6 +37,9 @@ public static class GUIManager {
 		}
 		else if (curMode == Mode.SquadStatus){
 			SquadStatusGui.DrawGUI();
+		}
+		else if (curMode == Mode.UnitStatus){
+			UnitStatusGui.DrawGUI();
 		}
 		else if (curMode == Mode.GameOver){
 			GameOverGui.DrawGUI();

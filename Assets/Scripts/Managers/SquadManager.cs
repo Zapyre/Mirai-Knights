@@ -53,6 +53,8 @@ public static class SquadManager {
 		else { // Engage in battle
 			if (GameManager.BattleEngine()){
 				Debug.Log ("Your squad has defeated the " + DataManager.enemySquad.GetName());
+				DataManager.curSquad.GetCurLoc().SetHostile(false);
+				DataManager.curSquad.GetCurLoc().AutoMenu();
 			}
 			else {
 				Debug.Log ("Your squad has been defeated by " + DataManager.enemySquad.GetName());
