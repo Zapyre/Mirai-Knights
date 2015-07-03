@@ -8,5 +8,7 @@ public class Golem : Unit{
 		dexterity = 2;
 		intelligence = 2;
 		endurance = 6;
+		unitRace = "Golem";
+		unitType = new Novice (this);
 	}
 }

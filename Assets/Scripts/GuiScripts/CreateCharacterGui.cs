@@ -14,8 +14,8 @@ public static class CreateCharacterGui {
 		MainMenuButton mmb = new MainMenuButton ();
 		CreateCharacterButton ccb = new CreateCharacterButton ();
 
-		squadName = "";
-		charName = "";
+		squadName = "Mystic Divers";
+		charName = "John";
 		
 		buttonList = new ArrayList ();
 		buttonList.Add (mmb);

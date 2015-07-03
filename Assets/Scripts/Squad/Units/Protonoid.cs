@@ -8,5 +8,7 @@ public class Protonoid : Unit{
 		dexterity = 3;
 		intelligence = 5;
 		endurance = 5;
+		unitRace = "Protonoid";
+		unitType = new Novice (this);
 	}
 }

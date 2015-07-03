@@ -3,6 +3,7 @@ using System.Collections;
 
 public abstract class Unit {
 	protected string name;
+	protected string unitRace;
 	protected Texture unitPortrait;
 	protected UnitType unitType;
 	protected ArrayList achievementList;
@@ -23,6 +24,8 @@ public abstract class Unit {
 	// Getters and Setters
 	public string GetName() { return name; }
 	public void SetName(string n) { name = n; }
+	public string GetUnitRace() { return unitRace; }
+	public void SetUnitRace(string uc) { unitRace = uc; }
 	public Texture GetUnitPortrait () { return unitPortrait; }
 	public void SetUnitPortrait (Texture up) { unitPortrait = up; }
 	public UnitType GetUnitType () { return unitType; }
@@ -189,7 +192,7 @@ public abstract class Unit {
 	}
 
 	public int GetPhyisicalAim () {
-		int totalPhysicalAim = unitType.GetPhyisicalAim ();
+		int totalPhysicalAim = unitType.GetPhysicalAim ();
 		foreach (Weapon weapon in weaponList) {
 			totalPhysicalAim += weapon.GetPhyisicalAim ();
 		}
@@ -197,7 +200,7 @@ public abstract class Unit {
 			totalPhysicalAim += armor.GetPhyisicalAim ();
 		}
 		foreach (Achievement achievement in achievementList) {
-			totalPhysicalAim += achievement.GetPhyisicalAim ();
+			totalPhysicalAim += achievement.GetPhysicalAim ();
 		}
 		return totalPhysicalAim;
 	}

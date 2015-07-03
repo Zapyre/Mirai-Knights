@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\GuiScripts\CreateCharacterGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\GameOverGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\MainMenuGui.cs" />
+     <Compile Include="Assets\Scripts\GuiScripts\RecruitmentGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\ShopGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\SquadStatusGui.cs" />
      <Compile Include="Assets\Scripts\GuiScripts\UnitStatusGui.cs" />

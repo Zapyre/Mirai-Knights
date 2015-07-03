@@ -18,7 +18,7 @@ public class Soldier : UnitType{
 		dodge[(int)Attack.Direction.Front] = 50 + u.GetDexterity ();
 		dodge[(int)Attack.Direction.Side] = 10 + u.GetDexterity ();
 		dodge[(int)Attack.Direction.Back] = u.GetDexterity ();
-		phyisicalAim = 100 + u.GetDexterity ();
+		physicalAim = 100 + u.GetDexterity ();
 
 		// Int Related Attributes
 		magicAttack = 5 + u.GetIntelligence ();

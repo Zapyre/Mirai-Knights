@@ -8,6 +8,8 @@ public class Elf : Unit{
 		dexterity = 5;
 		intelligence = 5;
 		endurance = 2;
+		unitRace = "Elf";
+		unitType = new Novice (this);
 	}
 }
 

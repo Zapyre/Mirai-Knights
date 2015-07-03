@@ -18,7 +18,7 @@ public class Tinker : UnitType{
 		dodge[(int)Attack.Direction.Front] = 50 + u.GetDexterity ();
 		dodge[(int)Attack.Direction.Side] = 10 + u.GetDexterity ();
 		dodge[(int)Attack.Direction.Back] = u.GetDexterity ();
-		phyisicalAim = 95 + u.GetDexterity ();
+		physicalAim = 95 + u.GetDexterity ();
 		
 		// Int Related Attributes
 		magicAttack = 8 + u.GetIntelligence ();

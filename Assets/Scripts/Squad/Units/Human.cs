@@ -8,5 +8,7 @@ public class Human : Unit{
 		dexterity = 3;
 		intelligence = 4;
 		endurance = 4;
+		unitRace = "Human";
+		unitType = new Novice (this);
 	}
 }

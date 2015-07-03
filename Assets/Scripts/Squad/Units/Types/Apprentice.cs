@@ -18,7 +18,7 @@ public class Apprentice : UnitType{
 		dodge[(int)Attack.Direction.Front] = 25 + u.GetDexterity ();
 		dodge[(int)Attack.Direction.Side] = 10 + u.GetDexterity ();
 		dodge[(int)Attack.Direction.Back] = u.GetDexterity ();
-		phyisicalAim = 80 + u.GetDexterity ();
+		physicalAim = 80 + u.GetDexterity ();
 		
 		// Int Related Attributes
 		magicAttack = 10 + u.GetIntelligence ();

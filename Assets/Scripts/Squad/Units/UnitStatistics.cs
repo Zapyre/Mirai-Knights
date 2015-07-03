@@ -10,8 +10,8 @@ public abstract class UnitStatistics {
 
 	// Dex Related Attributes
 	protected int speed;
+	protected int physicalAim;
 	protected int [] dodge = new int [Enum.GetNames(typeof(Attack.Direction)).Length];
-	protected int phyisicalAim;
 
 	// Int Related Attributes
 	protected int magicAttack;
@@ -37,8 +37,8 @@ public abstract class UnitStatistics {
 	public int GetBlock (int dir) { return block [dir]; }
 
 	public int GetSpeed () { return speed; }
+	public int GetPhysicalAim () { return physicalAim; }
 	public int GetDodge (int dir) { return dodge [dir]; }
-	public int GetPhyisicalAim () { return phyisicalAim; }
 
 	public int GetMagicAttack () { return magicAttack; }
 	public int GetMagicAim () { return magicAim; }
